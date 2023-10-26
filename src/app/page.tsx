@@ -1,12 +1,17 @@
-import Messanger from "@/components/Messanger";
-import { ModeToggle } from "@/components/theme-switcher";
+import About from "@/components/about/About";
+import Contact from "@/components/contact/Contact";
+import HeroSection from "@/components/hero/HeroSection";
+import Projects from "@/components/projects/Projects";
+import Skills from "@/components/skills/Skills";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Hello world!</h1>
-      <ModeToggle />
-      <Messanger />
-    </main>
+    <div className="flex flex-col gap-20">
+      <HeroSection />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+    </div>
   );
 }
