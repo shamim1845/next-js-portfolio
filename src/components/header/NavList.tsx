@@ -1,10 +1,11 @@
 import Link from "next/link";
-import React from "react";
 import { cn } from "@/lib/utils";
 
 const NavList = ({ classList }: { classList?: string }) => {
   return (
-    <ol className={cn("navLinks flex justify-start  gap-6", classList)}>
+    <ol
+      className={cn("navLinks flex justify-start  gap-5 lg:gap-10 ", classList)}
+    >
       <li>
         <Link href={"/#about"}>About</Link>
       </li>

@@ -1,17 +1,9 @@
-import React from "react";
-import SectionHeader from "../reuseable-components/SectionHeader";
 import Image from "next/image";
 import { Play } from "lucide-react";
+import SectionHeader from "../reuseable-components/SectionHeader";
+import { technologyList } from "./technologyListConstant";
 
 const About = () => {
-  const technologyList = [
-    "JavaScript (ES6+)",
-    "TypeScript",
-    "React js",
-    "Next js",
-    "Express js",
-    "GraphQl",
-  ];
   return (
     <section id="about" className="sectionContainer">
       <SectionHeader

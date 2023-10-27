@@ -74,9 +74,11 @@
   * {
     @apply border-border;
   }
+
   html {
     scroll-behavior: smooth;
   }
+
   body {
     @apply bg-background text-foreground;
     counter-reset: navItem;
@@ -107,10 +109,7 @@
     @apply bg-brandColor/70 outline-brandColor rounded-md;
   }
 
-  .sectionContainer {
-    @apply py-10 w-full max-w-[70rem] mx-auto;
-  }
-
+  /* navbar style */
   .navLinks li a:hover {
     @apply text-brandColor transition-all;
   }
@@ -119,6 +118,11 @@
     counter-increment: navItem 1;
     content: "0" counter(navItem) ".";
     @apply text-brandColor text-center mr-1;
+  }
+
+  /* utility class */
+  .sectionContainer {
+    @apply py-10 w-full max-w-[70rem] mx-auto;
   }
 
   .custom_shadow {
@@ -132,6 +136,7 @@
   .animate_bounce {
     animation: bounce 1s infinite;
   }
+
   .animate_left_to_right {
     animation: left_to_right 3s ease-in-out alternate infinite;
   }
@@ -139,6 +144,7 @@
   .animate_ledger_left_right {
     animation: ledgerLeftRight 3s ease-in-out infinite;
   }
+
   .animate_ledger_right_left {
     animation: ledgerRightLeft 3s ease-in-out infinite;
   }
@@ -151,6 +157,8 @@
     animation: ledgerTopBottom 3s ease-in-out infinite;
   }
 }
+
+/* keyframes */
 @keyframes bounce {
   0%,
   100% {

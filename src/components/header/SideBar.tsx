@@ -1,17 +1,12 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import NavList from "./NavList";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 const SideBar = () => {
+  const router = useRouter();
+
   return (
     <div className="md:hidden h-full">
       <Sheet>
@@ -22,7 +17,11 @@ const SideBar = () => {
         <SheetContent className="w-[300px] flex flex-col justify-center items-center gap-10">
           <NavList classList="flex-col justify-center" />
 
-          <Button variant="outline" size="lg" className="">
+          <Button
+            onClick={() => router.push("/#contact")}
+            variant="outline"
+            size="lg"
+          >
             Hire me
           </Button>
         </SheetContent>

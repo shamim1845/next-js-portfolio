@@ -71,31 +71,10 @@ const ProjectCard = ({
       <div className="flex-1 flex flex-col gap-5">
         {/* Name*/}
         <div>
-          <span className="text-brandColor">Featured Project</span>
-          <h4 className="text-2xl font-bold ">{project.name}</h4>
-        </div>
-
-        {/* Description */}
-        <div className="text-brandSecondary">{project.description}</div>
-
-        {/* Technology */}
-        <div className="flex flex-wrap gap-5">
-          {project.technology.map((technology) => (
-            <div
-              key={technology.name}
-              className="flex flex-col items-center justify-center max-w-fit"
-            >
-              <Image
-                src={technology.icon}
-                alt={technology.name}
-                width={40}
-                height={40}
-              />
-              <span className="text-brandSecondary text-sm">
-                {technology.name}
-              </span>
-            </div>
-          ))}
+          <span className="text-sm md:text-base text-brandColor">
+            Featured Project
+          </span>
+          <h4 className="text-xl md:text-2xl font-bold ">{project.name}</h4>
         </div>
 
         {/* External Links */}
@@ -167,6 +146,29 @@ const ProjectCard = ({
               </TooltipProvider>
             )}
           </div>
+        </div>
+
+        {/* Description */}
+        <div className="text-brandSecondary">{project.description}</div>
+
+        {/* Technology */}
+        <div className="flex flex-wrap gap-5">
+          {project.technology.map((technology) => (
+            <div
+              key={technology.name}
+              className="flex flex-col items-center justify-center max-w-fit"
+            >
+              <Image
+                src={technology.icon}
+                alt={technology.name}
+                width={40}
+                height={40}
+              />
+              <span className="text-brandSecondary text-sm">
+                {technology.name}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

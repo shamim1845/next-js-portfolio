@@ -45,7 +45,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
       <div className=" absolute top-0 left-0 right-0 bottom-0 bg-background/90 flex flex-col gap-5 p-5 translate-y-[100%]  group-hover:translate-y-0 transition ease-in-out duration-500 overflow-y-auto overflow-x-hidden">
         {/* Name*/}
         <div>
-          <h4 className="text-xl font-bold ">{project.name}</h4>
+          <h4 className="text-lg md:text-xl font-bold ">{project.name}</h4>
         </div>
 
         {/* External Links */}
@@ -61,7 +61,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                     </a>
                   </TooltipTrigger>
                   <TooltipContent className="absolute bottom-0 left-0">
-                    <p>Source Code (Front-End )</p>
+                    <p className="min-w-[5rem]">Source Code (Front-End )</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -77,7 +77,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                     </a>
                   </TooltipTrigger>
                   <TooltipContent className="absolute bottom-0 left-0">
-                    <p>Source Code (Back-End)</p>
+                    <p className="min-w-[5rem]">Source Code (Back-End)</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -93,7 +93,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                     </a>
                   </TooltipTrigger>
                   <TooltipContent className="absolute bottom-0 left-0">
-                    <p>Source Code</p>
+                    <p className="min-w-[5rem]">Source Code</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -109,7 +109,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                     </a>
                   </TooltipTrigger>
                   <TooltipContent className="absolute bottom-0 left-0">
-                    <p>Live Link</p>
+                    <p className="min-w-[3.5rem]">Live Link</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>

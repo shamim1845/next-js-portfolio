@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { DM_Sans, Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";

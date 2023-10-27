@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import React from "react";
 
 const SectionHeader = ({
   title,
@@ -19,7 +18,7 @@ const SectionHeader = ({
     >
       <h4
         className={cn(
-          "text-3xl font-bold mb-5 before:font-semibold before:text-xl before:align-middle before:text-brandColor before:mr-2",
+          "text-2xl md:text-3xl font-bold mb-5 before:font-semibold before:text-base before:md:text-xl before:align-middle before:text-brandColor before:mr-2",
           titleClassName
         )}
       >

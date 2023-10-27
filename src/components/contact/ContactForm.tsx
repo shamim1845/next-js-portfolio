@@ -23,7 +23,7 @@ const FormSchema = z.object({
     message: "Name must be at least 2 characters.",
   }),
   email: z.string().email("Email must be a valid email."),
-  message: z.string().min(20, { message: "At least 20 characters" }),
+  message: z.string().min(2, { message: "Write something." }),
 });
 
 function ContactForm() {
@@ -37,12 +37,11 @@ function ContactForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
-
     emailjs
       .send("service_bei77gf", "template_ib88cr4", data, "3B5_KCYznJHc6RLTz")
       .then(
         function (response) {
+          form.reset();
           toast({
             title: "Email send sucessfully.",
           });

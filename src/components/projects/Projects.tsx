@@ -30,7 +30,9 @@ const Projects = () => {
       <div>
         <div className="mb-10 flex flex-col items-center justify-center">
           <h4 className="text-2xl font-bold ">My Early days projects</h4>
-          <span className="text-brandColor">Featured Project</span>
+          <span className="text-sm md:text-base text-brandColor">
+            Featured Project
+          </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

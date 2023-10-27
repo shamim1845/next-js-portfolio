@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Button } from "../ui/button";
 import { ArrowDownToDot } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -13,11 +12,11 @@ const ScrollDown = () => {
   return (
     <Button
       variant="icon"
-      className="hover:bg-transparent hover:text-brandColor transition-all text-sm"
+      className="hover:bg-transparent hover:text-brandColor transition-all "
       onClick={handleClick}
     >
       <ArrowDownToDot className="animate_bounce mr-2 stroke-brandColor" />
-      <span>SCROLL DOWN</span>
+      <span className="text-xs tracking-wide">SCROLL DOWN</span>
     </Button>
   );
 };
