@@ -16,8 +16,10 @@ const useScrollHandler = () => {
       setLastScrollY(window.scrollY);
     }
 
+    // add event when scrool down or top
     window.addEventListener("scroll", handleScroll);
 
+    // destroy event when component unmount or re-render
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 

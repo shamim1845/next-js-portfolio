@@ -10,9 +10,8 @@ import { Button } from "../ui/button";
 import SideBar from "./SideBar";
 
 const Header = () => {
-  // Tracl scrollbar
+  // Track scrollbar
   const { lastScrollY, scrolling } = useScrollHandler();
-
   const router = useRouter();
 
   return (

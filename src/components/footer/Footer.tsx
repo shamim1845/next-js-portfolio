@@ -1,6 +1,5 @@
-import React from "react";
-import Social from "../hero/Social";
 import { HeartPulse } from "lucide-react";
+import Social from "../hero/Social";
 
 const Footer = () => {
   return (

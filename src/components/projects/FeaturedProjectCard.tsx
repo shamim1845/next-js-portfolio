@@ -1,5 +1,5 @@
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 import Fancybox from "../reuseable-components/FancyBox";
 import {
   Tooltip,
@@ -7,25 +7,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
-import { ExternalLink, Github } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-interface ProjectProps {
-  name: string;
-  featured: boolean;
-  images?: string[];
-  description: React.ReactNode;
-  technology: {
-    name: string;
-    icon: string;
-  }[];
-  gitHubLinks: {
-    frontEnd?: string;
-    backEnd?: string;
-    fullStack?: string;
-  };
-  liveLink?: string;
-}
+import { ProjectProps } from "./projectConstant";
 
 const ProjectCard = ({
   project,

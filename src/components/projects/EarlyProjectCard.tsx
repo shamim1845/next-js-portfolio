@@ -1,6 +1,4 @@
 import Image from "next/image";
-import React from "react";
-import Fancybox from "../reuseable-components/FancyBox";
 import {
   Tooltip,
   TooltipContent,
@@ -8,24 +6,7 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip";
 import { ExternalLink, Github } from "lucide-react";
-import { cn } from "@/lib/utils";
-
-interface ProjectProps {
-  name: string;
-  featured: boolean;
-  images?: string[];
-  description: React.ReactNode;
-  technology: {
-    name: string;
-    icon: string;
-  }[];
-  gitHubLinks: {
-    frontEnd?: string;
-    backEnd?: string;
-    fullStack?: string;
-  };
-  liveLink?: string;
-}
+import { ProjectProps } from "./projectConstant";
 
 const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
   return (
@@ -60,8 +41,8 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                       <Github className="sicial_icon" />
                     </a>
                   </TooltipTrigger>
-                  <TooltipContent className="absolute bottom-0 left-0">
-                    <p className="min-w-[5rem]">Source Code (Front-End )</p>
+                  <TooltipContent className="absolute bottom-0 left-0 min-w-[7rem]">
+                    <p>Source Code (Front-End)</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -76,8 +57,8 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                       <Github className="sicial_icon" />
                     </a>
                   </TooltipTrigger>
-                  <TooltipContent className="absolute bottom-0 left-0">
-                    <p className="min-w-[5rem]">Source Code (Back-End)</p>
+                  <TooltipContent className="absolute bottom-0 left-0 min-w-[7rem]">
+                    <p>Source Code (Back-End)</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -92,8 +73,8 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                       <Github className="sicial_icon" />
                     </a>
                   </TooltipTrigger>
-                  <TooltipContent className="absolute bottom-0 left-0">
-                    <p className="min-w-[5rem]">Source Code</p>
+                  <TooltipContent className="absolute bottom-0 left-0 min-w-[7rem]">
+                    <p>Source Code</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>

@@ -1,4 +1,23 @@
-export const ProjectsConstant = [
+import React from "react";
+
+export interface ProjectProps {
+  name: string;
+  featured: boolean;
+  images?: string[];
+  description: React.ReactNode;
+  technology: {
+    name: string;
+    icon: string;
+  }[];
+  gitHubLinks: {
+    frontEnd?: string;
+    backEnd?: string;
+    fullStack?: string;
+  };
+  liveLink?: string;
+}
+
+export const ProjectsConstant: ProjectProps[] = [
   {
     name: "Digimart (E-Commerce)",
     featured: true,
@@ -21,21 +40,23 @@ export const ProjectsConstant = [
       "/project/digimart/16.png",
     ],
     description: (
-      <div>
-        <p>
-          <span className="text-foreground font-semibold">
-            Project Summary :
-          </span>{" "}
-          Digimart is an e-commerce store. With Digimart, users can discover a
-          wide range of products, from electronics and fashion to home
-          essentials and more. It has user-friendly navigation and secure
-          transactions.
-        </p>
+      <>
+        <div>
+          <p>
+            <span className="text-foreground font-semibold">
+              Project Summary :
+            </span>{" "}
+            Digimart is an e-commerce store. With Digimart, users can discover a
+            wide range of products, from electronics and fashion to home
+            essentials and more. It has user-friendly navigation and secure
+            transactions.
+          </p>
+        </div>
         <br />
         <div>
           <span className="text-foreground font-semibold">
             Major Challenges :
-          </span>{" "}
+          </span>
           <ul className="list-disc list-inside">
             <li>
               Implementing the user authentication system on both the server and
@@ -75,11 +96,11 @@ export const ProjectsConstant = [
             </li>
           </ul>
         </div>
-      </div>
+      </>
     ),
     technology: [
       {
-        name: "React Js",
+        name: "React JS",
         icon: "/tech-icons/React.svg",
       },
       {
@@ -87,11 +108,11 @@ export const ProjectsConstant = [
         icon: "/tech-icons/Redux.svg",
       },
       {
-        name: "Node Js",
+        name: "Node JS",
         icon: "/tech-icons/Node.js.svg",
       },
       {
-        name: "Express",
+        name: "Express JS",
         icon: "/tech-icons/Express.svg",
       },
       {
@@ -106,12 +127,16 @@ export const ProjectsConstant = [
         name: "Cloudinary",
         icon: "/tech-icons/Cloudinary.svg",
       },
+      {
+        name: "Styled Components",
+        icon: "/tech-icons/styled-components.svg",
+      },
     ],
     gitHubLinks: {
       frontEnd: "https://github.com/shamim1845/digimart-frontend",
       backEnd: "https://github.com/shamim1845/digimart-backend",
     },
-    liveLink: "https://digimart-ecommerce.onrender.com/",
+    liveLink: "https://digimart-ecommerce.onrender.com",
   },
   {
     name: "PC Craft (PC Builder)",
@@ -122,15 +147,17 @@ export const ProjectsConstant = [
       "/project/pc-craft/3.png",
     ],
     description: (
-      <div>
-        <p>
-          <span className="text-foreground font-semibold">
-            Project Summary :
-          </span>{" "}
-          This is an application that simplifies the process of building a
-          custom PC by allowing users to select their preferred components and
-          generate PDFs.
-        </p>
+      <>
+        <div>
+          <p>
+            <span className="text-foreground font-semibold">
+              Project Summary :
+            </span>{" "}
+            This is an application that simplifies the process of building a
+            custom PC by allowing users to select their preferred components and
+            generate PDFs.
+          </p>
+        </div>
         <br />
         <div>
           <span className="text-foreground font-semibold">
@@ -172,20 +199,20 @@ export const ProjectsConstant = [
             </li>
           </ul>
         </div>
-      </div>
+      </>
     ),
     technology: [
       {
-        name: "Next Js",
+        name: "Next JS",
         icon: "/tech-icons/Next.js.svg",
-      },
-      {
-        name: "Redux",
-        icon: "/tech-icons/Redux.svg",
       },
       {
         name: "Tailwind CSS",
         icon: "/tech-icons/Tailwind-CSS.svg",
+      },
+      {
+        name: "Redux",
+        icon: "/tech-icons/Redux.svg",
       },
       {
         name: "MongoDB",
@@ -201,10 +228,120 @@ export const ProjectsConstant = [
       },
     ],
     gitHubLinks: {
-      frontEnd: "https://github.com/shamim1845/digimart-frontend",
-      backEnd: "https://github.com/shamim1845/digimart-backend",
+      frontEnd: "",
+      backEnd: "",
+      fullStack: "https://github.com/shamim1845/pc-builder",
     },
-    liveLink: "https://digimart-ecommerce.onrender.com/",
+    liveLink: "https://pc-craft.vercel.app",
+  },
+  {
+    name: "DND Image Gallery",
+    featured: false,
+    images: ["/project/early-days/image-gallery.png"],
+    description: (
+      <div>
+        <p>
+          DND Image Gallery is a robust and feature-rich image gallery project.
+          With this platform, users have the power to upload new photos,
+          effortlessly rearrange existing ones, choose multiple images at once,
+          and swiftly delete them. It&apos;s your one-stop solution for managing
+          and showcasing your image collection with ease.
+        </p>
+      </div>
+    ),
+    technology: [
+      {
+        name: "TypeScript",
+        icon: "/tech-icons/TypeScript.svg",
+      },
+      {
+        name: "React JS",
+        icon: "/tech-icons/React.svg",
+      },
+      {
+        name: "Vite",
+        icon: "/tech-icons/Vite.js.svg",
+      },
+      {
+        name: "Styled Components",
+        icon: "/tech-icons/styled-components.svg",
+      },
+      {
+        name: "DND/KIT",
+        icon: "/tech-icons/dnd-kit.svg",
+      },
+    ],
+    gitHubLinks: {
+      frontEnd: "",
+      backEnd: "",
+      fullStack: "https://github.com/shamim1845/ollyo-image-gallery",
+    },
+    liveLink: "https://ollyo-image-gallery.netlify.app",
+  },
+  {
+    name: "Finity",
+    featured: false,
+    images: ["/project/early-days/finity.png"],
+    description: (
+      <div>
+        <p>
+          Finity is an agency website template built with Next JS, Tailwind CSS,
+          and shadcn/ui. It has authentication and authorization features like
+          user registration, verification, and log in.
+        </p>
+      </div>
+    ),
+    technology: [
+      {
+        name: "Next JS",
+        icon: "/tech-icons/Next.js.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "/tech-icons/Tailwind-CSS.svg",
+      },
+      {
+        name: "shadcn/ui",
+        icon: "/tech-icons/shadcn.svg",
+      },
+    ],
+    gitHubLinks: {
+      frontEnd: "",
+      backEnd: "",
+      fullStack: "https://github.com/shamim1845/getup",
+    },
+    liveLink: "https://getup-shamim.vercel.app",
+  },
+  {
+    name: "Tenzies 2.0",
+    featured: false,
+    images: ["/project/early-days/tenzies-2.0.png"],
+    description: (
+      <div>
+        <p>
+          Tenzies 2.0 is a fun dice game application that offers an engaging
+          experience. Roll the dice and keep going until all of them show the
+          same number. Simply click on each die to lock it at its current value
+          before each roll.
+        </p>
+      </div>
+    ),
+    technology: [
+      {
+        name: "React JS",
+        icon: "/tech-icons/React.svg",
+      },
+      {
+        name: "Vite",
+        icon: "/tech-icons/Vite.js.svg",
+      },
+    ],
+    gitHubLinks: {
+      frontEnd: "",
+      backEnd: "",
+      fullStack: "https://github.com/shamim1845/dice-game",
+    },
+    liveLink: "https://dice-game-sigma-six.vercel.app",
   },
   {
     name: "Shamim Keep",
@@ -213,10 +350,10 @@ export const ProjectsConstant = [
     description: (
       <div>
         <p>
-          Implemented ordering, cart reviewing and multi filtering products
-          feature system for the users, and administration dashboard for the
-          admin where admin manage orders and add, delete, update products and
-          categories.
+          Shamim Keep is a note-taking app developed by me. It allows users to
+          create and manage notes. Shamim Keep is designed to be a simple and
+          easy-to-use tool for capturing and organizing information. You can
+          create text-based notes in Shamim Keep.
         </p>
       </div>
     ),
@@ -227,7 +364,7 @@ export const ProjectsConstant = [
       },
       {
         name: "CSS",
-        icon: "/tech-icons/React.svg",
+        icon: "/tech-icons/CSS3.svg",
       },
       {
         name: "JavaScript",
@@ -240,5 +377,99 @@ export const ProjectsConstant = [
       fullStack: "https://github.com/shamim1845/shamim-keep",
     },
     liveLink: "https://shamim1845.github.io/shamim-keep/",
+  },
+  {
+    name: "ChatCord",
+    featured: false,
+    images: ["/project/early-days/chatcord.png"],
+    description: (
+      <div>
+        <p>
+          ChatCord is a user-friendly real-time chat application designed for
+          seamless communication. With ChatCord, you can easily select your
+          preferred chat room, join the conversation, and send messages to
+          connect with other users in a dynamic and interactive environment.
+        </p>
+      </div>
+    ),
+    technology: [
+      {
+        name: "HTML",
+        icon: "/tech-icons/HTML5.svg",
+      },
+      {
+        name: "CSS",
+        icon: "/tech-icons/CSS3.svg",
+      },
+      {
+        name: "JavaScript",
+        icon: "/tech-icons/JavaScript.svg",
+      },
+      {
+        name: "Node JS",
+        icon: "/tech-icons/Node.js.svg",
+      },
+      {
+        name: "Express Js",
+        icon: "/tech-icons/Express.svg",
+      },
+      {
+        name: "Socket.io",
+        icon: "/tech-icons/Socket.io.svg",
+      },
+    ],
+    gitHubLinks: {
+      frontEnd: "",
+      backEnd: "",
+      fullStack: "https://github.com/shamim1845/chatcord",
+    },
+    liveLink: "https://chatcord-realtime-chat-app.onrender.com",
+  },
+  {
+    name: "Weather App",
+    featured: false,
+    images: ["/project/early-days/weather-app.png"],
+    description: (
+      <div>
+        <p>
+          This application is a weather-checking tool that empowers you to
+          access real-time weather information simply by entering your
+          city&apos;s name. Stay informed about the current weather conditions
+          in your area with just a few clicks.
+        </p>
+      </div>
+    ),
+    technology: [
+      {
+        name: "HTML",
+        icon: "/tech-icons/HTML5.svg",
+      },
+      {
+        name: "CSS",
+        icon: "/tech-icons/CSS3.svg",
+      },
+      {
+        name: "JavaScript",
+        icon: "/tech-icons/JavaScript.svg",
+      },
+      {
+        name: "Node JS",
+        icon: "/tech-icons/Node.js.svg",
+      },
+      {
+        name: "Express Js",
+        icon: "/tech-icons/Express.svg",
+      },
+      {
+        name: "Handlebars",
+        icon: "/tech-icons/Handlebars.svg",
+      },
+    ],
+    gitHubLinks: {
+      frontEnd: "",
+      backEnd: "",
+      fullStack: "https://github.com/shamim1845/weather-app-with-express.js",
+    },
+    liveLink: "https://weather-app-sbrk.onrender.com/weather",
   },
 ];

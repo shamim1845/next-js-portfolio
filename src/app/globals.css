@@ -84,32 +84,29 @@
     counter-reset: navItem;
   }
 
-  /* ScrollBar customization */
+  /* ScrollBar customization for body */
   body::-webkit-scrollbar {
     @apply w-2;
   }
-
   body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
-
   body::-webkit-scrollbar-thumb {
     @apply bg-brandColor/70 outline-brandColor rounded-md;
   }
 
+  /* ScrollBar customization for entier website except body element */
   ::-webkit-scrollbar {
     @apply w-1;
   }
-
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
-
   ::-webkit-scrollbar-thumb {
     @apply bg-brandColor/70 outline-brandColor rounded-md;
   }
 
-  /* navbar style */
+  /* style for navbar */
   .navLinks li a:hover {
     @apply text-brandColor transition-all;
   }
@@ -120,7 +117,7 @@
     @apply text-brandColor text-center mr-1;
   }
 
-  /* utility class */
+  /* utility class for re-use */
   .sectionContainer {
     @apply py-10 w-full max-w-[70rem] mx-auto;
   }
@@ -133,6 +130,7 @@
     @apply hover:stroke-brandColor cursor-pointer transition-all hover:-translate-y-1;
   }
 
+  /*  animation  */
   .animate_bounce {
     animation: bounce 1s infinite;
   }
@@ -218,7 +216,7 @@
   }
 }
 
-/* 404 page style */
+/* style for 404 page  */
 @layer base {
   .error-container {
     text-align: center;

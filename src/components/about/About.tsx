@@ -13,9 +13,9 @@ const About = () => {
       />
 
       <div className="flex justify-between items-center flex-col md:flex-row md:items-start gap-20">
-        {/* details */}
+        {/* About ME */}
         <div className="flex-1 text-brandSecondary text-lg">
-          <p>Hello! My name is Md Shamim Hossain, from Dhaka, Bangladesh.</p>
+          <p>Hello! My name is Md Shamim Hossain, from Rajshahi, Bangladesh.</p>
           <br />
 
           <p>
@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Picture */}
+        {/*My Picture */}
         <div className="flex-1 ">
           <div
             className="overflow-hidden rounded-lg w-[20rem]"
@@ -83,8 +83,8 @@ const About = () => {
                 <Image
                   src="/shamim.webp"
                   alt="shamim"
-                  width={500}
-                  height={500}
+                  width={400}
+                  height={388}
                   className="w-full h-full"
                   style={{
                     position: "absolute",

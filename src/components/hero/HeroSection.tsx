@@ -1,10 +1,14 @@
+import { constant } from "@/app/constant";
 import { Button } from "../ui/button";
 import ScrollDown from "./ScrollDown";
 import Social from "./Social";
 
 const HeroSection = () => {
+  // constants
+  const { description } = constant;
+
   return (
-    <section className="min-h-[calc(100vh-5rem)] flex flex-col justify-between">
+    <section className="min-h-[calc(100vh-5rem)]  flex flex-col justify-between">
       <div className="flex-1 flex flex-col justify-center gap-3 sm:gap-5">
         <div>
           <h1 className="text-brandColor md:text-lg">Hi, My name is</h1>
@@ -24,9 +28,7 @@ const HeroSection = () => {
 
         <div>
           <p className="max-w-[540px] text-brandSecondary text-lg">
-            I’m a web developer specializing in building (and occasionally
-            designing) exceptional digital experiences. Primarily interested in
-            Web Development and Deep Learning.
+            {description}
           </p>
         </div>
         <div className="flex items-center gap-5">

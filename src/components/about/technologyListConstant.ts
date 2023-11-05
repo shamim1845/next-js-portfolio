@@ -3,6 +3,7 @@ export const technologyList = [
   "TypeScript",
   "React js",
   "Next js",
+  "Node js",
   "Express js",
-  "GraphQl",
+  "MongoDB",
 ];

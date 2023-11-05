@@ -2,9 +2,6 @@
 import { FacebookProvider, CustomChat } from "react-facebook";
 
 const Messanger = () => {
-  console.log();
-  console.log();
-
   return (
     <FacebookProvider
       appId={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID as string}

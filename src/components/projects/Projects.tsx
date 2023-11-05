@@ -1,8 +1,7 @@
-import React from "react";
 import SectionHeader from "../reuseable-components/SectionHeader";
 import FeaturedProjectCard from "./FeaturedProjectCard";
-import { ProjectsConstant } from "./projectConstant";
 import EarlyProjectCard from "./EarlyProjectCard";
+import { ProjectsConstant } from "./projectConstant";
 
 const Projects = () => {
   return (
@@ -29,9 +28,15 @@ const Projects = () => {
       {/* Early project */}
       <div>
         <div className="mb-10 flex flex-col items-center justify-center">
-          <h4 className="text-2xl font-bold ">My Early days projects</h4>
-          <span className="text-sm md:text-base text-brandColor">
-            Featured Project
+          <h4 className="text-2xl font-bold ">Other Noteworthy Projects</h4>
+          <span>
+            <a
+              href="https://github.com/shamim1845?tab=repositories"
+              className="text-sm md:text-base text-brandColor hover:underline transition-all"
+              target="_blank"
+            >
+              view the repositories
+            </a>
           </span>
         </div>
 

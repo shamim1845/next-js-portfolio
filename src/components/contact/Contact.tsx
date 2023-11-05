@@ -1,10 +1,10 @@
-import React from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import SectionHeader from "../reuseable-components/SectionHeader";
 import InfoCard from "./InfoCard";
 import ContactForm from "./ContactForm";
-import { Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
+  // constant
   const info_constant = [
     {
       title: "Contact on phone",
@@ -22,6 +22,7 @@ const Contact = () => {
       icon: <MapPin className="stroke-brandColor" />,
     },
   ];
+
   return (
     <section id="contact" className="sectionContainer">
       <SectionHeader
