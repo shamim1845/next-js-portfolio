@@ -35,6 +35,7 @@ const Header = () => {
             variant="outline"
             className="hidden md:block "
             onClick={() => router.push("/#contact")}
+            aria-label="Hire me"
           >
             Hire me
           </Button>

@@ -101,7 +101,7 @@ function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" size="lg">
+        <Button type="submit" size="lg" aria-label="Submit Contact Form">
           Submit
         </Button>
       </form>

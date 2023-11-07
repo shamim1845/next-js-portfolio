@@ -11,7 +11,7 @@ const SideBar = () => {
     <div className="md:hidden h-full">
       <Sheet>
         <SheetTrigger asChild>
-          <Menu className="cursor-pointer" />
+          <Menu className="cursor-pointer" role="menubar" />
         </SheetTrigger>
 
         <SheetContent className="w-[300px] flex flex-col justify-center items-center gap-10">
@@ -21,6 +21,7 @@ const SideBar = () => {
             onClick={() => router.push("/#contact")}
             variant="outline"
             size="lg"
+            aria-label="Hire me"
           >
             Hire me
           </Button>

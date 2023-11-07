@@ -38,7 +38,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                 <Tooltip>
                   <TooltipTrigger className="">
                     <a href={project.gitHubLinks.frontEnd} target="_blank">
-                      <Github className="sicial_icon" />
+                      <Github className="sicial_icon" aria-label="Github" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent className="absolute bottom-0 left-0 min-w-[7rem]">
@@ -54,7 +54,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                 <Tooltip>
                   <TooltipTrigger className="">
                     <a href={project.gitHubLinks.backEnd} target="_blank">
-                      <Github className="sicial_icon" />
+                      <Github className="sicial_icon" aria-label="Github" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent className="absolute bottom-0 left-0 min-w-[7rem]">
@@ -70,7 +70,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                 <Tooltip>
                   <TooltipTrigger className="">
                     <a href={project.gitHubLinks.fullStack} target="_blank">
-                      <Github className="sicial_icon" />
+                      <Github className="sicial_icon" aria-label="Github" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent className="absolute bottom-0 left-0 min-w-[7rem]">
@@ -86,7 +86,10 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                 <Tooltip>
                   <TooltipTrigger className="">
                     <a href={project.liveLink} target="_blank">
-                      <ExternalLink className="sicial_icon" />
+                      <ExternalLink
+                        className="sicial_icon"
+                        aria-label="Live Link"
+                      />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent className="absolute bottom-0 left-0">

@@ -38,7 +38,7 @@ const HeroSection = () => {
 
         <div className="mt-10">
           <a href={"/resume.pdf"} download>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" aria-label="Download Resume">
               Download Resume
             </Button>
           </a>

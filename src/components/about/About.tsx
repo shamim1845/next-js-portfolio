@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Play } from "lucide-react";
 import SectionHeader from "../reuseable-components/SectionHeader";
 import { technologyList } from "./technologyListConstant";
+import { url } from "inspector";
 
 const About = () => {
   return (
@@ -45,7 +46,15 @@ const About = () => {
             className="overflow-hidden rounded-lg w-[20rem]"
             style={{ opacity: "1,", transform: "none" }}
           >
-            <div className="relative border-[10px] border-brandColor/20 rounded-lg w-full h-full">
+            <div
+              className="relative border-[10px] border-brandColor/20 rounded-lg w-full h-full "
+              style={{
+                backgroundImage: "url('/shamim.webp')",
+                backgroundPosition: "center center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            >
               <span className="absolute -top-2.5 left-0 z-10 h-2.5 w-10 animate_ledger_left_right rounded-full bg-gradient-to-r from-transparent to-brandColor"></span>
               <span className="absolute top-auto -bottom-2.5 left-auto z-10 h-2.5 w-10 animate_ledger_right_left rounded-full bg-gradient-to-r from-brandColor to-transparent"></span>
               <span className="absolute -left-2.5 top-auto z-10 h-10 w-2.5 animate_ledger_bottom_top rounded-full bg-gradient-to-t from-transparent to-brandColor"></span>
@@ -79,25 +88,6 @@ const About = () => {
                     padding: "100% 0px 0px",
                   }}
                 ></span>
-
-                <Image
-                  src="/shamim.webp"
-                  alt="shamim"
-                  width={400}
-                  height={388}
-                  className="w-full h-full"
-                  style={{
-                    position: "absolute",
-                    inset: "0px",
-                    boxSizing: "border-box",
-                    padding: "0px",
-                    border: "none",
-                    margin: "auto",
-                    display: "block",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                />
               </span>
             </div>
           </div>

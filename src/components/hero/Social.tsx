@@ -9,17 +9,17 @@ import {
 const socialConstant = [
   {
     title: "Github",
-    icon: <Github className="sicial_icon" />,
+    icon: <Github className="sicial_icon" aria-label="Github" />,
     link: "https://github.com/shamim1845",
   },
   {
     title: "Linkedin",
-    icon: <Linkedin className="sicial_icon" />,
+    icon: <Linkedin className="sicial_icon" aria-label="Linkedin" />,
     link: "https://www.linkedin.com/in/shamim1845",
   },
   {
     title: "Twitter",
-    icon: <Twitter className="sicial_icon" />,
+    icon: <Twitter className="sicial_icon" aria-label="Twitter" />,
     link: "https://twitter.com/shamim1845",
   },
 ];

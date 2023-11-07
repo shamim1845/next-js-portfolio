@@ -6,6 +6,7 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { constant } from "./constant";
+import Whatsapp from "@/components/Whatsapp";
 
 // font
 const font = DM_Sans({
@@ -25,7 +26,10 @@ export const metadata: Metadata = {
   alternates: { canonical: website_url },
   colorScheme: "light dark",
   creator: "Md Shamim Hossain",
-  icons: [{ rel: "icon", url: website_url + "/logo.png" }],
+  icons: [
+    { rel: "icon", url: "/logo.png" },
+    { rel: "apple-touch-icon", url: "/logo.png" },
+  ],
   keywords: [
     "web developer",
     "front end developer",
@@ -76,8 +80,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   viewport: "width=device-width, initial-scale=1",
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090B" },
+    { media: "(prefers-color-scheme: light)", color: "#FAFAFA" },
   ],
 };
 
@@ -98,7 +102,7 @@ export default function RootLayout({
           <Header />
           <main className={"container px-5 md:px-10"}>{children}</main>
           <Toaster />
-          {/* <Messanger /> */}
+          <Whatsapp />
           <Footer />
         </ThemeProvider>
       </body>

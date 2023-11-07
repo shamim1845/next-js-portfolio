@@ -1,5 +1,5 @@
 export const constant = {
-  website_name: "My Portfolio Website",
+  website_name: "SHAMIM",
   website_url: "https://shamim-me.vercel.app",
   title: "Md Shamim Hossain | Web Developer",
   description:
