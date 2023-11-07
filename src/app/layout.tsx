@@ -6,7 +6,6 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { constant } from "./constant";
-import Messanger from "@/components/Messanger";
 
 // font
 const font = DM_Sans({
@@ -99,7 +98,7 @@ export default function RootLayout({
           <Header />
           <main className={"container px-5 md:px-10"}>{children}</main>
           <Toaster />
-          <Messanger />
+          {/* <Messanger /> */}
           <Footer />
         </ThemeProvider>
       </body>

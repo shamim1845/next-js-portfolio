@@ -9,7 +9,7 @@ const Messanger = () => {
     >
       <CustomChat
         pageId={process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID as string}
-        minimized={true}
+        minimized={false}
       />
     </FacebookProvider>
   );
