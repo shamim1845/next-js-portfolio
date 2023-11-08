@@ -1,9 +1,11 @@
 import Image from "next/image";
 
 const Whatsapp = () => {
+  const message =
+    "Hello, I've been brainstorming a project with the goal of making a positive impact. Can you assist me?";
   return (
     <div className="fixed bottom-[20px] md:bottom-[40px]  right-[20px] md:right-[40px]">
-      <a href="https://wa.me/8801631132907?text=hello" target="_blank">
+      <a href={`https://wa.me/8801631132907?text=${message}`} target="_blank">
         <Image
           src="/whatsapp.svg"
           alt="whatsapp"
