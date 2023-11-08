@@ -9,7 +9,7 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-[calc(100vh-5rem)]  flex flex-col justify-between">
-      <div className="flex-1 flex flex-col justify-center gap-3 sm:gap-5">
+      <div className="flex-1 flex flex-col justify-center gap-3 sm:gap-5 py-10">
         <div>
           <h1 className="text-brandColor md:text-lg">Hi, My name is</h1>
         </div>
@@ -31,9 +31,9 @@ const HeroSection = () => {
             {description}
           </p>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 mt-2">
           <Social />
-          <div className="w-full max-w-[10rem] h-[2px] bg-brandColor/50 "></div>
+          <div className="w-full max-w-[5rem] h-[2px] bg-brandColor/50 "></div>
         </div>
 
         <div className="mt-10">

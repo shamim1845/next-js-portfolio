@@ -1,6 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import Fancybox from "../reuseable-components/FancyBox";
+import dynamic from "next/dynamic";
 import {
   Tooltip,
   TooltipContent,
@@ -9,6 +9,10 @@ import {
 } from "../ui/tooltip";
 import { cn } from "@/lib/utils";
 import { ProjectProps } from "./projectConstant";
+
+const Fancybox = dynamic(() => import("../reuseable-components/FancyBox"), {
+  ssr: false,
+});
 
 const ProjectCard = ({
   project,

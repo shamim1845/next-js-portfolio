@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Whatsapp = () => {
   return (
-    <div className="fixed bottom-[20px] md:bottom-[50px]  right-[20px] md:right-[50px]">
+    <div className="fixed bottom-[20px] md:bottom-[40px]  right-[20px] md:right-[40px]">
       <a href="https://wa.me/8801631132907?text=hello" target="_blank">
         <Image
           src="/whatsapp.svg"

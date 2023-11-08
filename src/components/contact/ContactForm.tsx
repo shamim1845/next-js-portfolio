@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import emailjs from "@emailjs/browser";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -36,7 +35,9 @@ function ContactForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    // dynamically load emailjs
+    const emailjs = (await import("@emailjs/browser")).default;
     emailjs
       .send("service_bei77gf", "template_ib88cr4", data, "3B5_KCYznJHc6RLTz")
       .then(
