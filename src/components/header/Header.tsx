@@ -27,13 +27,13 @@ const Header = () => {
         <Link href={"/"}>
           <Logo />
         </Link>
-        <NavList classList="hidden md:flex" />
+        <NavList classList="hidden lg:flex" />
         <div className="flex items-center gap-2">
           <ModeToggle />
 
           <Button
             variant="outline"
-            className="hidden md:block "
+            className="hidden lg:block "
             onClick={() => router.push("/#contact")}
             aria-label="Hire me"
           >

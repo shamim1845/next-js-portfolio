@@ -16,6 +16,9 @@ const NavList = ({ classList }: { classList?: string }) => {
         <Link href={"/#projects"}>Projects</Link>
       </li>
       <li>
+        <Link href={"/#achievements"}>Achievements</Link>
+      </li>
+      <li>
         <Link href={"/#contact"}>Contact</Link>
       </li>
     </ol>

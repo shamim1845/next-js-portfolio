@@ -8,7 +8,7 @@ const SideBar = () => {
   const router = useRouter();
 
   return (
-    <div className="md:hidden h-full">
+    <div className="lg:hidden h-full">
       <Sheet>
         <SheetTrigger asChild>
           <Menu className="cursor-pointer" role="menubar" />
@@ -18,9 +18,9 @@ const SideBar = () => {
           <NavList classList="flex-col justify-center" />
 
           <Button
-            onClick={() => router.push("/#contact")}
             variant="outline"
-            size="lg"
+            onClick={() => router.push("/#contact")}
+            size={"lg"}
             aria-label="Hire me"
           >
             Hire me
