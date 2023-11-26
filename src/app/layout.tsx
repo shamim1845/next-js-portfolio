@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header/Header";
@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Md Shamim Hossain" }],
   abstract: description,
   alternates: { canonical: website_url },
-  colorScheme: "light dark",
   creator: "Md Shamim Hossain",
   icons: [
     { rel: "icon", url: "/logo.png" },
@@ -78,11 +77,16 @@ export const metadata: Metadata = {
   publisher: "MD Shamim Hossain",
   referrer: "origin",
   robots: { index: true, follow: true },
-  viewport: "width=device-width, initial-scale=1",
+};
+
+// viewport
+export const viewport: Viewport = {
+  width: 1,
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#09090B" },
     { media: "(prefers-color-scheme: light)", color: "#FAFAFA" },
   ],
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
