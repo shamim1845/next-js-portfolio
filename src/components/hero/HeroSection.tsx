@@ -11,7 +11,7 @@ const HeroSection = () => {
     <section className="min-h-[calc(100vh-5rem)]  flex flex-col justify-between">
       <div className="flex-1 flex flex-col justify-center gap-3 sm:gap-5 py-10">
         <div>
-          <h1 className="text-brandColor md:text-lg">Hi, My name is</h1>
+          <span className="text-brandColor text-xl">Hello, I&apos;m</span>
         </div>
 
         <div>
@@ -21,9 +21,9 @@ const HeroSection = () => {
         </div>
 
         <div>
-          <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-muted-foreground">
-            A passionate web developer.
-          </h3>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-muted-foreground">
+            Web Developer in Bangladesh
+          </h1>
         </div>
 
         <div>

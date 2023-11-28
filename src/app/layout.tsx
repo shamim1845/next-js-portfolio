@@ -7,6 +7,8 @@ import Footer from "@/components/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { constant } from "./constant";
 import Whatsapp from "@/components/Whatsapp";
+import { Suspense } from "react";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 // font
 const font = DM_Sans({
@@ -96,7 +98,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="7H40hIgx1qvuJZ_9n-jZ9Fvg-HPJbOeVmv7kjM4fYZc"
+        />
+      </head>
       <body className={`${font.className}`}>
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

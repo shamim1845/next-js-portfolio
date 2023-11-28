@@ -16,11 +16,11 @@ const About = () => {
       <div className="flex justify-between items-center flex-col md:flex-row md:items-start gap-20">
         {/* About ME */}
         <div className="flex-1 text-brandSecondary text-lg">
-          <p>Hello! My name is Md Shamim Hossain, from Rajshahi, Bangladesh.</p>
+          <p>Hi! I&apos;m Md Shamim Hossain, from Dhaka, Bangladesh.</p>
           <br />
 
           <p>
-            I am a Front-End Web Developer. I turn Figma designs into
+            I am a Web Developer in Bangladesh. I turn Figma designs into
             mobile-friendly web templates and utilize React JS to bring these
             templates to life. I am very comfortable with Next.js and utilize
             the power of server-side rendering. I&apos;ve got the basics of the
