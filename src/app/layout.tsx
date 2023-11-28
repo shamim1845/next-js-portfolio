@@ -7,8 +7,7 @@ import Footer from "@/components/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { constant } from "./constant";
 import Whatsapp from "@/components/Whatsapp";
-import { Suspense } from "react";
-import GoogleAnalytics from "./GoogleAnalytics";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 // font
 const font = DM_Sans({
@@ -105,10 +104,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`${font.className}`}>
-        <Suspense>
-          <GoogleAnalytics />
-        </Suspense>
-
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -122,6 +117,9 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
+      <GoogleTagManager
+        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
+      />
     </html>
   );
 }
