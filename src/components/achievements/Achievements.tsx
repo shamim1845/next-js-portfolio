@@ -14,6 +14,16 @@ const achivementConstants = [
     img: "/achivements/LWS-Excellence-Certificate.jpg",
     alt: "LWS-Excellence-Certificate",
   },
+  {
+    id: 3,
+    img: "/achivements/5e4639ae-f9e3-4339-af56-d89093fdafc7-md-shamim-hossain-080391f6-fd8d-4d83-a039-5908c346e3e6-certificate.jpg",
+    alt: "Cloudinary-Certificate",
+  },
+  {
+    id: 4,
+    img: "/achivements/Courser-DEC2UHWKAVLN.jpg",
+    alt: "Meta - Introduction to Front End Development -Certificate",
+  },
 ];
 
 const Achievements = () => {
