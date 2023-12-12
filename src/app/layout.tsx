@@ -117,9 +117,9 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
-      <GoogleTagManager
+      {/* <GoogleTagManager
         gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
-      />
+      /> */}
     </html>
   );
 }
