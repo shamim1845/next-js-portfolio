@@ -98,10 +98,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* <meta
+        <meta
           name="google-site-verification"
           content="7H40hIgx1qvuJZ_9n-jZ9Fvg-HPJbOeVmv7kjM4fYZc"
-        /> */}
+        />
       </head>
       <body className={`${font.className}`}>
         <ThemeProvider
@@ -117,9 +117,9 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
-      {/* <GoogleTagManager
+      <GoogleTagManager
         gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
-      /> */}
+      />
     </html>
   );
 }
