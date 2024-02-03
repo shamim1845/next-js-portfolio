@@ -11,7 +11,7 @@ const Whatsapp = () => {
           alt="whatsapp"
           width={100}
           height={100}
-          className="w-[50px] h-[50px] md:w-[60px] md:h-[60px]"
+          className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] hover:scale-110 transition-all duration-300"
         />
       </a>
     </div>

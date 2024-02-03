@@ -8,6 +8,7 @@ import NavList from "./NavList";
 import { ModeToggle } from "../theme-switcher";
 import { Button } from "../ui/button";
 import SideBar from "./SideBar";
+import PublicAssets from "../public-assets/PublicAssets";
 
 const Header = () => {
   // Track scrollbar
@@ -29,6 +30,7 @@ const Header = () => {
         </Link>
         <NavList classList="hidden lg:flex" />
         <div className="flex items-center gap-2">
+          <PublicAssets />
           <ModeToggle />
 
           <Button

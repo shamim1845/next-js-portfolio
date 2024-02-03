@@ -111,11 +111,11 @@
     @apply text-brandColor transition-all;
   }
 
-  .navLinks li a::before {
+  /* .navLinks li a::before {
     counter-increment: navItem 1;
     content: "0" counter(navItem) ".";
     @apply text-brandColor text-center mr-1;
-  }
+  } */
 
   /* utility class for re-use */
   .sectionContainer {

@@ -22,7 +22,7 @@ const HeroSection = () => {
 
         <div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-muted-foreground">
-            Web Developer in Bangladesh
+            Full Stack JavaScript Developer
           </h1>
         </div>
 
@@ -37,7 +37,7 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-10">
-          <a href={"/resume.pdf"} download>
+          <a href={"/Md-Shamim-Hossain(Full-Stack-Resume).pdf"} download>
             <Button variant="outline" size="lg" aria-label="Download Resume">
               Download Resume
             </Button>

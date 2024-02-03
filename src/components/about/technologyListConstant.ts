@@ -6,4 +6,6 @@ export const technologyList = [
   "Node JS",
   "Express JS",
   "MongoDB",
+  "Webpack",
+  "Git",
 ];

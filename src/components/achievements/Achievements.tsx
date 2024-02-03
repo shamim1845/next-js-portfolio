@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SectionHeader from "../reuseable-components/SectionHeader";
 import dynamic from "next/dynamic";
-import { error } from "console";
 
 const Fancybox = dynamic(() => import("../reuseable-components/FancyBox"), {
   ssr: false,

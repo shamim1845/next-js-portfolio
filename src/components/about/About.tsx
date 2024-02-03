@@ -1,8 +1,6 @@
-import Image from "next/image";
 import { Play } from "lucide-react";
 import SectionHeader from "../reuseable-components/SectionHeader";
 import { technologyList } from "./technologyListConstant";
-import { url } from "inspector";
 
 const About = () => {
   return (
@@ -16,16 +14,19 @@ const About = () => {
       <div className="flex justify-between items-center flex-col md:flex-row md:items-start gap-20">
         {/* About ME */}
         <div className="flex-1 text-brandSecondary text-lg">
-          <p>Hi! I&apos;m Md Shamim Hossain, from Dhaka, Bangladesh.</p>
+          <p>Hello! I&apos;m Md Shamim Hossain, from Dhaka, Bangladesh.</p>
           <br />
-
           <p>
-            I am a Web Developer in Bangladesh. I turn Figma designs into
-            mobile-friendly web templates and utilize React JS to bring these
-            templates to life. I am very comfortable with Next.js and utilize
-            the power of server-side rendering. I&apos;ve got the basics of the
-            backend covered too, using Node.js, Express JS, and MongoDB to
-            smoothly connect the backend with the frontend in single-page apps.
+            I am a Web Developer With a strong foundation in HTML, CSS, and
+            Tailwind CSS, I specialize in creating visually stunning and
+            responsive web applications. My proficiency extends to JavaScript
+            and TypeScript, enabling me to build dynamic and engaging user
+            interfaces. I bring a wealth of experience in popular frameworks
+            like React.js, Redux, and Next.js, allowing me to transform design
+            concepts into seamless and interactive web experiences. While I have
+            a good understanding of the backend with Node.js, Express.js, and
+            MongoDB, my primary focus is on crafting exceptional front-end
+            solutions.
           </p>
           <br />
           <p>Here are a few technologies I’ve been working with recently:</p>
@@ -43,13 +44,13 @@ const About = () => {
         {/*My Picture */}
         <div className="flex-1 ">
           <div
-            className="overflow-hidden rounded-lg w-[20rem]"
+            className="overflow-hidden rounded-lg w-[22rem]"
             style={{ opacity: "1,", transform: "none" }}
           >
             <div
               className="relative border-[10px] border-brandColor/20 rounded-lg w-full h-full "
               style={{
-                backgroundImage: "url('/shamim.webp')",
+                backgroundImage: "url('/shamim.jpg')",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",

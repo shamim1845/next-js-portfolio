@@ -48,7 +48,7 @@ const ProjectCard = ({
                 src={img}
                 width={500}
                 height={500}
-                className="w-full h-full rounded"
+                className="w-full h-full rounded  hover:scale-105 transition-all duration-300"
               />
             </a>
           ))}
@@ -146,13 +146,14 @@ const ProjectCard = ({
           {project.technology.map((technology) => (
             <div
               key={technology.name}
-              className="flex flex-col items-center justify-center max-w-fit"
+              className="flex flex-col items-center justify-center max-w-fit hover:scale-105 transition-all duration-300"
             >
               <Image
                 src={technology.icon}
                 alt={technology.name}
                 width={40}
                 height={40}
+                className=" "
               />
               <span className="text-brandSecondary text-sm">
                 {technology.name}

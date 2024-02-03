@@ -139,6 +139,95 @@ export const ProjectsConstant: ProjectProps[] = [
     liveLink: "https://digimart-ecommerce.onrender.com",
   },
   {
+    name: "Flow Jobs",
+    featured: true,
+    images: [
+      "/project/flow-jobs/1.png",
+      "/project/flow-jobs/2.png",
+      "/project/flow-jobs/3.png",
+    ],
+    description: (
+      <>
+        <div>
+          <p>
+            <span className="text-foreground font-semibold">
+              Project Summary :
+            </span>{" "}
+            Flow Jobs is a job finder application. It is a digital platform
+            designed to help individuals search for employment opportunities. It
+            is a great place where job seekers can explore various job listings
+            using robust search filters, and submit applications. <br /> <br />
+            Employers can use the application to post job openings and
+            candidates can find this job when an admin approves this job. <br />{" "}
+            <br />
+            The goal of this job finder application is to facilitate a more
+            efficient and effective job search process for both job seekers and
+            employers, ultimately helping individuals find suitable employment
+            opportunities and companies find qualified candidates.
+          </p>
+        </div>
+        <br />
+
+        <div>
+          <span className="text-foreground font-semibold">Technology :</span>
+          <ul className="list-disc list-inside">
+            <li>
+              <span className="text-foreground">Front-End:- </span>
+              Next.js is used as a full-stack framework, with Tailwind CSS for
+              styling, shadcn/ui as a component library, react-markdown for
+              render markdown.
+            </li>
+            <li>
+              <span className="text-foreground">Back-End:- </span>
+              Next.js API route for developing Rest API, and Postgres as a
+              Database.
+            </li>
+            <li>
+              <span className="text-foreground">File Upload:- </span>
+              Vercel/blob
+            </li>
+            <li>
+              <span className="text-foreground">Deployment & CI/CD :- </span>
+              Vercel and Github.
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
+    technology: [
+      {
+        name: "Next JS",
+        icon: "/tech-icons/Next.js.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "/tech-icons/Tailwind-CSS.svg",
+      },
+      {
+        name: "shadcn/ui",
+        icon: "/tech-icons/shadcn/ui.svg",
+      },
+      {
+        name: "Prisma",
+        icon: "/tech-icons/prisma.svg",
+      },
+      {
+        name: "Clerk",
+        icon: "/tech-icons/clerk.svg",
+      },
+      {
+        name: "Vercel",
+        icon: "/tech-icons/Vercel.svg",
+      },
+    ],
+    gitHubLinks: {
+      frontEnd: "",
+      backEnd: "",
+      fullStack: "https://github.com/shamim1845/NextJS-Job-Board",
+    },
+    liveLink: "https://next-js-job-board.vercel.app",
+  },
+  {
     name: "PC Craft (PC Builder)",
     featured: true,
     images: [

@@ -42,7 +42,7 @@ const Skills = () => {
                   {skill.technology.map((tech) => (
                     <div
                       key={tech.name}
-                      className="flex flex-col justify-center items-center"
+                      className="flex flex-col justify-center items-center d:w-[60px] md:h-[60px] hover:scale-110 transition-all duration-300"
                     >
                       <Image
                         src={tech.icon}
