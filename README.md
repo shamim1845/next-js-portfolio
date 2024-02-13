@@ -46,5 +46,3 @@ If you have any questions or suggestions, feel free to reach out to me:
 - Email: samimraj1845@gmail.com
 - LinkedIn: [https://www.linkedin.com/in/shamim1845](https://www.linkedin.com/in/shamim1845)
 - Twitter: [https://twitter.com/shamim1845](https://twitter.com/shamim1845)
-
-## Achivements

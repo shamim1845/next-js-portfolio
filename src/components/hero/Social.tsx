@@ -1,3 +1,5 @@
+"use client";
+
 import { Github, Linkedin, Twitter } from "lucide-react";
 import {
   Tooltip,
@@ -5,6 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion } from "framer-motion";
 
 const socialConstant = [
   {
@@ -24,22 +27,33 @@ const socialConstant = [
   },
 ];
 
+const iconVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
 const Social = () => {
   return (
     <div className="flex gap-5 ">
       {socialConstant.map((social) => (
-        <TooltipProvider key={social.title}>
-          <Tooltip>
-            <TooltipTrigger className="">
-              <a href={social.link} target="_blank">
-                {social.icon}
-              </a>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>{social.title}</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+        <motion.div variants={iconVariants} key={social.title}>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="">
+                <a href={social.link} target="_blank">
+                  {social.icon}
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{social.title}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </motion.div>
       ))}
     </div>
   );

@@ -1,6 +1,12 @@
 import Image from "next/image";
 import SectionHeader from "../reuseable-components/SectionHeader";
 import dynamic from "next/dynamic";
+import { MotionDiv, MotionSection } from "../framer-motion/Motion";
+import {
+  containerVariants,
+  fadeInVariants,
+  sectionVariants,
+} from "../framer-motion/variants";
 
 const Fancybox = dynamic(() => import("../reuseable-components/FancyBox"), {
   ssr: false,
@@ -27,16 +33,29 @@ const achivementConstants = [
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="sectionContainer">
+    <MotionSection
+      variants={sectionVariants({ from: "right" })}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      id="achievements"
+      className="sectionContainer"
+    >
       <SectionHeader
         title="Achievements"
         className=""
         titleClassName="before:content-['04.']"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <MotionDiv
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-10"
+      >
         {achivementConstants.map((achivement) => (
-          <div key={achivement.id}>
+          <MotionDiv variants={fadeInVariants} key={achivement.id}>
             <Fancybox
               options={{
                 Carousel: {
@@ -54,10 +73,10 @@ const Achievements = () => {
                 />
               </a>
             </Fancybox>
-          </div>
+          </MotionDiv>
         ))}
-      </div>
-    </section>
+      </MotionDiv>
+    </MotionSection>
   );
 };
 

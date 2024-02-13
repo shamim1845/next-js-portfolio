@@ -9,6 +9,8 @@ import { ModeToggle } from "../theme-switcher";
 import { Button } from "../ui/button";
 import SideBar from "./SideBar";
 import PublicAssets from "../public-assets/PublicAssets";
+import { motion } from "framer-motion";
+import { fadeInVariants, containerVariants } from "../framer-motion/variants";
 
 const Header = () => {
   // Track scrollbar
@@ -16,7 +18,10 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <header
+    <motion.header
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
       className={cn(
         "container flex items-center h-[5rem] px-5 md:px-10 bg-background z-50",
         scrolling === "top" &&
@@ -32,20 +37,22 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <PublicAssets />
           <ModeToggle />
-
-          <Button
-            variant="outline"
-            className="hidden lg:block "
-            onClick={() => router.push("/#contact")}
-            aria-label="Hire me"
-          >
-            Hire me
-          </Button>
-
-          <SideBar />
+          <motion.div variants={fadeInVariants}>
+            <Button
+              variant="outline"
+              className="hidden lg:block "
+              onClick={() => router.push("/#contact")}
+              aria-label="Hire me"
+            >
+              Hire me
+            </Button>
+          </motion.div>
+          <motion.div variants={fadeInVariants}>
+            <SideBar />
+          </motion.div>
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 

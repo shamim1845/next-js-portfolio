@@ -7,10 +7,15 @@ import {
 } from "../ui/tooltip";
 import { ExternalLink, Github } from "lucide-react";
 import { ProjectProps } from "./projectConstant";
+import { MotionDiv } from "../framer-motion/Motion";
+import { fadeInVariants } from "../framer-motion/variants";
 
 const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
   return (
-    <div className="relative overflow-hidden  group rounded">
+    <MotionDiv
+      variants={fadeInVariants}
+      className="relative overflow-hidden  group rounded"
+    >
       <div className="">
         {project.images?.length && (
           <Image
@@ -124,7 +129,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
           ))}
         </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 

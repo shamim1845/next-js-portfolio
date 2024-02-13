@@ -82,6 +82,7 @@
   body {
     @apply bg-background text-foreground;
     counter-reset: navItem;
+    overflow-x: hidden;
   }
 
   /* ScrollBar customization for body */

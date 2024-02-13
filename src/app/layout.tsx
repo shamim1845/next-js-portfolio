@@ -8,6 +8,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { constant } from "./constant";
 import Whatsapp from "@/components/Whatsapp";
 import { GoogleTagManager } from "@next/third-parties/google";
+import TrackScroll from "@/components/TrackScroll";
+import ScrollToTopBtn from "@/components/ScrollToTopBtn";
 
 // font
 const font = DM_Sans({
@@ -104,6 +106,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${font.className}`}>
+        <TrackScroll />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -115,6 +118,7 @@ export default function RootLayout({
           <Toaster />
           <Whatsapp />
           <Footer />
+          <ScrollToTopBtn />
         </ThemeProvider>
       </body>
       <GoogleTagManager

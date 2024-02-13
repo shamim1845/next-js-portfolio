@@ -9,6 +9,8 @@ import {
 } from "../ui/tooltip";
 import { cn } from "@/lib/utils";
 import { ProjectProps } from "./projectConstant";
+import { MotionDiv } from "../framer-motion/Motion";
+import { fadeInVariants } from "../framer-motion/variants";
 
 const Fancybox = dynamic(() => import("../reuseable-components/FancyBox"), {
   ssr: false,
@@ -22,7 +24,8 @@ const ProjectCard = ({
   number: number;
 }) => {
   return (
-    <div
+    <MotionDiv
+      variants={fadeInVariants}
       className={cn(
         "flex flex-col md:flex-row justify-between gap-10 ",
         Number(number) % 2 === 0 ? "" : "md:flex-row-reverse"
@@ -162,7 +165,7 @@ const ProjectCard = ({
           ))}
         </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 

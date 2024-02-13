@@ -1,19 +1,38 @@
 import { Play } from "lucide-react";
 import SectionHeader from "../reuseable-components/SectionHeader";
 import { technologyList } from "./technologyListConstant";
+import { MotionDiv, MotionSection } from "../framer-motion/Motion";
+import {
+  containerVariants,
+  fadeInVariants,
+  sectionVariants,
+} from "../framer-motion/variants";
 
 const About = () => {
   return (
-    <section id="about" className="sectionContainer">
+    <MotionSection
+      variants={sectionVariants({ from: "left" })}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      id="about"
+      className="sectionContainer"
+    >
       <SectionHeader
         title="About Me"
         className="md:items-start"
         titleClassName="before:content-['01.']"
       />
 
-      <div className="flex justify-between items-center flex-col md:flex-row md:items-start gap-20">
+      <MotionDiv
+        variants={containerVariants}
+        className="flex justify-between items-center flex-col md:flex-row md:items-start gap-20"
+      >
         {/* About ME */}
-        <div className="flex-1 text-brandSecondary text-lg">
+        <MotionDiv
+          variants={fadeInVariants}
+          className="flex-1 text-brandSecondary text-lg"
+        >
           <p>Hello! I&apos;m Md Shamim Hossain, from Dhaka, Bangladesh.</p>
           <br />
           <p>
@@ -39,10 +58,10 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
+        </MotionDiv>
 
         {/*My Picture */}
-        <div className="flex-1 ">
+        <MotionDiv variants={fadeInVariants} className="flex-1 ">
           <div
             className="overflow-hidden rounded-lg w-[22rem]"
             style={{ opacity: "1,", transform: "none" }}
@@ -92,9 +111,9 @@ const About = () => {
               </span>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </MotionDiv>
+      </MotionDiv>
+    </MotionSection>
   );
 };
 
