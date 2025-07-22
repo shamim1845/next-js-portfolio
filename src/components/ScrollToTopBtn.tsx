@@ -15,7 +15,7 @@ const ScrollToTopBtn = () => {
     >
       <ScrollToTop
         smooth
-        className="left-10 !bg-brandColor hover:!bg-brandColor/90 transition-all flex justify-center items-center"
+        className="left-[20px] md:left-[40px] !bg-brandColor hover:!bg-brandColor/90 transition-all flex justify-center items-center"
         color="#fff"
         component={<ArrowBigUp width={28} height={28} />}
       />

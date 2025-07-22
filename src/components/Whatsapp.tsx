@@ -25,7 +25,7 @@ const Whatsapp = () => {
       initial="hidden"
       animate="visible"
       variants={whatsappVariants}
-      className="fixed bottom-[20px] md:bottom-[40px]  right-[20px] md:right-[40px]"
+      className="fixed bottom-[40px] md:bottom-[40px]  right-[20px] md:right-[40px]"
     >
       <a href={`https://wa.me/8801631132907?text=${message}`} target="_blank">
         <Image
@@ -33,7 +33,7 @@ const Whatsapp = () => {
           alt="whatsapp"
           width={100}
           height={100}
-          className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] hover:scale-110 transition-all duration-300"
+          className="w-[45px] h-[45px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] hover:scale-110 transition-all duration-300"
         />
       </a>
     </motion.div>
