@@ -125,7 +125,7 @@ export const ProjectsConstant: ProjectProps[] = [
       },
       {
         name: "Framer Motion",
-        icon: "/tech-icons/framer-motion.svg",
+        icon: "/tech-icons/Framer-motion.svg",
       },
       {
         name: "TypeScript",
@@ -133,7 +133,7 @@ export const ProjectsConstant: ProjectProps[] = [
       },
       {
         name: "Appwrite",
-        icon: "/tech-icons/appwrite.svg",
+        icon: "/tech-icons/Appwrite.svg",
       },
       {
         name: "Vercel",
@@ -227,7 +227,7 @@ export const ProjectsConstant: ProjectProps[] = [
       },
       {
         name: "Framer Motion",
-        icon: "/tech-icons/framer-motion.svg",
+        icon: "/tech-icons/Framer-motion.svg",
       },
       {
         name: "TypeScript",
