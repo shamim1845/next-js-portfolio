@@ -46,11 +46,11 @@ const HeroSection = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-[calc(100vh-5rem)]  flex flex-col justify-between"
+      className="flex flex-col justify-between mt-5 md:mt-10"
     >
-      <div className="flex-1 flex flex-col justify-center gap-3 sm:gap-5 py-10">
+      <div className="flex-1 flex flex-col justify-center gap-3 sm:gap-5 py-10 ">
         <MotionDiv variants={fadeInVariants}>
-          <span className="text-brandColor text-xl">Hello, I&apos;m</span>
+          <span className="text-brandColor text-xl">Hi, I&apos;m</span>
         </MotionDiv>
 
         <MotionDiv variants={fadeInVariants}>
@@ -60,7 +60,7 @@ const HeroSection = () => {
         </MotionDiv>
 
         <MotionDiv variants={fadeInVariants}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-muted-foreground">
+          <h1 className="max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-muted-foreground">
             Full Stack JavaScript Developer
           </h1>
         </MotionDiv>
@@ -79,7 +79,10 @@ const HeroSection = () => {
         </MotionDiv>
 
         <MotionDiv variants={fadeInVariants} className="mt-10">
-          <a href={"/Md-Shamim-Hossain(Full-Stack-Resume).pdf"} download>
+          <a
+            href={"/Md_Shamim_Hossain_Front_End_Developer_Resume.pdf"}
+            download
+          >
             <Button variant="outline" size="lg" aria-label="Download Resume">
               Download Resume
             </Button>
@@ -89,7 +92,7 @@ const HeroSection = () => {
 
       <MotionDiv
         variants={scrollDownVariants}
-        className="flex justify-center py-5"
+        className="flex justify-center py-5 md:pt-10"
       >
         <ScrollDown />
       </MotionDiv>

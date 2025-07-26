@@ -49,8 +49,8 @@ const ProjectCard = ({
               <Image
                 alt={project.name}
                 src={img}
-                width={500}
-                height={500}
+                width={1000}
+                height={1000}
                 className="w-full h-full rounded  hover:scale-105 transition-all duration-300"
               />
             </a>
@@ -71,7 +71,7 @@ const ProjectCard = ({
         <div className="flex justify-between">
           <div className="flex gap-10">
             {/* Front End */}
-            {project.gitHubLinks.frontEnd && (
+            {project?.gitHubLinks?.frontEnd && (
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="">
@@ -87,7 +87,7 @@ const ProjectCard = ({
             )}
 
             {/* Back End */}
-            {project.gitHubLinks.backEnd && (
+            {project?.gitHubLinks?.backEnd && (
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="">
@@ -103,7 +103,7 @@ const ProjectCard = ({
             )}
 
             {/* Full Stack */}
-            {project.gitHubLinks.fullStack && (
+            {project?.gitHubLinks?.fullStack && (
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="">
@@ -121,7 +121,7 @@ const ProjectCard = ({
 
           {/* Live Link */}
           <div>
-            {project.liveLink && (
+            {project?.liveLink && (
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="">

@@ -33,7 +33,7 @@ const Skills = () => {
         >
           <MotionDiv variants={fadeInVariants}>
             <TabsList className="md:w-[20rem] h-full grid grid-cols-1 grid-rows-5">
-              {skillsConstant.map((skill) => (
+              {skillsConstant?.map((skill) => (
                 <TabsTrigger
                   key={skill.btnText}
                   value={skill.identifier as string}

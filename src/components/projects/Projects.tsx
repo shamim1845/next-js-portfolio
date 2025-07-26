@@ -26,7 +26,7 @@ const Projects = () => {
         variants={containerVariants}
         className="flex flex-col gap-20 mb-20"
       >
-        {ProjectsConstant.filter((project) => project.featured).map(
+        {ProjectsConstant?.filter((project) => project.featured).map(
           (project, index) => (
             <FeaturedProjectCard
               key={project.name}
@@ -61,7 +61,7 @@ const Projects = () => {
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-2 gap-10"
         >
-          {ProjectsConstant.filter((project) => !project.featured).map(
+          {ProjectsConstant?.filter((project) => !project.featured).map(
             (project) => (
               <EarlyProjectCard key={project.name} project={project} />
             )

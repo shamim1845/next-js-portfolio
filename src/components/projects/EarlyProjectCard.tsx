@@ -14,16 +14,16 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
   return (
     <MotionDiv
       variants={fadeInVariants}
-      className="relative overflow-hidden  group rounded"
+      className="relative overflow-hidden  group rounded w-full h-full"
     >
-      <div className="">
+      <div className="w-full h-full">
         {project.images?.length && (
           <Image
             alt={project.name}
             src={project?.images[0]}
-            width={500}
-            height={500}
-            className="w-auto h-auto"
+            width={1000}
+            height={1000}
+            className="w-full h-full "
           />
         )}
       </div>
@@ -38,11 +38,11 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
         <div className="flex justify-between">
           <div className="flex gap-10">
             {/* Front End */}
-            {project.gitHubLinks.frontEnd && (
+            {project?.gitHubLinks?.frontEnd && (
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="">
-                    <a href={project.gitHubLinks.frontEnd} target="_blank">
+                    <a href={project?.gitHubLinks?.frontEnd} target="_blank">
                       <Github className="sicial_icon" aria-label="Github" />
                     </a>
                   </TooltipTrigger>
@@ -54,11 +54,11 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
             )}
 
             {/* Back End */}
-            {project.gitHubLinks.backEnd && (
+            {project?.gitHubLinks?.backEnd && (
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="">
-                    <a href={project.gitHubLinks.backEnd} target="_blank">
+                    <a href={project?.gitHubLinks?.backEnd} target="_blank">
                       <Github className="sicial_icon" aria-label="Github" />
                     </a>
                   </TooltipTrigger>
@@ -70,7 +70,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
             )}
 
             {/* Full Stack */}
-            {project.gitHubLinks.fullStack && (
+            {project?.gitHubLinks?.fullStack && (
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="">

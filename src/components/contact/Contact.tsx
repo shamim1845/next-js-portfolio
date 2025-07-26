@@ -14,7 +14,7 @@ const Contact = () => {
   const info_constant = [
     {
       title: "Contact on phone",
-      data: ["+880 1631132907", "+880 1302118842"],
+      data: ["+880 1631-132907"],
       icon: <Phone className="stroke-brandColor" />,
     },
     {

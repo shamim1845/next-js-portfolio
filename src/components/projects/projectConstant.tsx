@@ -9,7 +9,7 @@ export interface ProjectProps {
     name: string;
     icon: string;
   }[];
-  gitHubLinks: {
+  gitHubLinks?: {
     frontEnd?: string;
     backEnd?: string;
     fullStack?: string;
@@ -19,7 +19,237 @@ export interface ProjectProps {
 
 export const ProjectsConstant: ProjectProps[] = [
   {
-    name: "Digimart (E-Commerce)",
+    name: "LOISCHLOE",
+    featured: true,
+    images: [
+      "/project/loischloe/loischloe-1.png",
+      "/project/loischloe/loischloe-2.png",
+      "/project/loischloe/loischloe-3.png",
+      "/project/loischloe/loischloe-4.png",
+      "/project/loischloe/loischloe-5.png",
+      "/project/loischloe/loischloe-6.png",
+      "/project/loischloe/loischloe-7.png",
+      "/project/loischloe/loischloe-8.png",
+      "/project/loischloe/loischloe-9.png",
+      "/project/loischloe/loischloe-10.png",
+      "/project/loischloe/loischloe-11.png",
+      "/project/loischloe/loischloe-12.png",
+    ],
+    description: (
+      <>
+        <div>
+          <p>
+            <span className="text-foreground font-semibold">
+              Project Summary :{" "}
+            </span>
+            LoisChloe is a luxury vegan beauty and skincare platform tailored
+            for the Bangladeshi market. It offers a wide range of cosmetics and
+            skincare products with an elegant interface, smooth browsing
+            experience, secure user accounts, and fast checkout process,
+            ensuring a premium online shopping experience.
+          </p>
+        </div>
+        <br />
+        <div>
+          <span className="text-foreground font-semibold">
+            Major Challenges :
+          </span>
+          <ul className="list-disc list-inside">
+            <li>
+              Migrating from a traditional WordPress site to a high-performance
+              single-page application using Next.js.
+            </li>
+            <li>
+              Implementing secure user authentication, file storage, and
+              database services using Appwrite across both client and server
+              environments.
+            </li>
+            <li>
+              Optimizing performance through code splitting, lazy loading, image
+              compression, and reducing initial load time.
+            </li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <span className="text-foreground font-semibold">Technology :</span>
+          <ul className="list-disc list-inside">
+            <li>
+              <span className="text-foreground">Front-End:- </span>
+              Next.js 14 and React.js for UI development, Tailwind CSS and Radix
+              UI for styling and accessibility, Framer Motion for animations,
+              Redux and React Context API for state management, React Hook Form
+              with Zod for form handling and validation, and Swiper for
+              carousels.
+            </li>
+            <li>
+              <span className="text-foreground">Back-End / BaaS:- </span>
+              Appwrite for authentication, real-time database, file storage, and
+              backend-as-a-service functionality.
+            </li>
+
+            <li>
+              <span className="text-foreground">Deployment & CI/CD :- </span>
+              Vercel for hosting and GitHub for version control and
+              collaboration.
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
+    technology: [
+      {
+        name: "React JS",
+        icon: "/tech-icons/React.svg",
+      },
+      {
+        name: "Next JS",
+        icon: "/tech-icons/Next.js.svg",
+      },
+
+      {
+        name: "Tailwind CSS",
+        icon: "/tech-icons/Tailwind-CSS.svg",
+      },
+      {
+        name: "shadcn/ui",
+        icon: "/tech-icons/Shadcn-ui.svg",
+      },
+      {
+        name: "Redux",
+        icon: "/tech-icons/Redux.svg",
+      },
+      {
+        name: "Swiper",
+        icon: "/tech-icons/Swiper.svg",
+      },
+      {
+        name: "Framer Motion",
+        icon: "/tech-icons/framer-motion.svg",
+      },
+      {
+        name: "TypeScript",
+        icon: "/tech-icons/TypeScript.svg",
+      },
+      {
+        name: "Appwrite",
+        icon: "/tech-icons/appwrite.svg",
+      },
+      {
+        name: "Vercel",
+        icon: "/tech-icons/Vercel.svg",
+      },
+    ],
+    liveLink: "https://loischloe.com.bd",
+  },
+  {
+    name: "SpaceMediaProduction",
+    featured: true,
+    images: [
+      "/project/spacemedia/spacemedia-1.png",
+      "/project/spacemedia/spacemedia-2.png",
+      "/project/spacemedia/spacemedia-3.png",
+      "/project/spacemedia/spacemedia-4.png",
+      "/project/spacemedia/spacemedia-5.png",
+    ],
+    description: (
+      <>
+        <div>
+          <p>
+            <span className="text-foreground font-semibold">
+              Project Summary :{" "}
+            </span>
+            SpaceMedia is a creative media agency website built to showcase
+            their video production, photography, and media services with smooth
+            animations, interactive layouts, and an engaging user experience.
+          </p>
+        </div>
+        <br />
+        <div>
+          <span className="text-foreground font-semibold">
+            Major Challenges :
+          </span>
+          <ul className="list-disc list-inside">
+            <li>
+              Creating an immersive and media-rich UI to highlight visual
+              content effectively.
+            </li>
+            <li>
+              Ensuring fast load times and responsiveness for high-resolution
+              media across all devices.
+            </li>
+            <li>
+              Managing animation performance while maintaining accessibility and
+              clean structure.
+            </li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <span className="text-foreground font-semibold">Technology :</span>
+          <ul className="list-disc list-inside">
+            <li>
+              <span className="text-foreground">Front-End:- </span>
+              Next.js and React.js for structure, Tailwind CSS and shadcn/ui for
+              styling and components, Framer Motion for animations, Swiper for
+              sliders, and React Player for embedded media.
+            </li>
+            <li>
+              <span className="text-foreground">Deployment & CI/CD :- </span>
+              Vercel for hosting and GitHub for version control and
+              collaboration.
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
+    technology: [
+      {
+        name: "React JS",
+        icon: "/tech-icons/React.svg",
+      },
+      {
+        name: "Next JS",
+        icon: "/tech-icons/Next.js.svg",
+      },
+
+      {
+        name: "Tailwind CSS",
+        icon: "/tech-icons/Tailwind-CSS.svg",
+      },
+      {
+        name: "shadcn/ui",
+        icon: "/tech-icons/Shadcn-ui.svg",
+      },
+      {
+        name: "Swiper",
+        icon: "/tech-icons/Swiper.svg",
+      },
+      {
+        name: "Framer Motion",
+        icon: "/tech-icons/framer-motion.svg",
+      },
+      {
+        name: "TypeScript",
+        icon: "/tech-icons/TypeScript.svg",
+      },
+      {
+        name: "Vimeo",
+        icon: "/tech-icons/Vimeo.svg",
+      },
+      {
+        name: "Cloudinary",
+        icon: "/tech-icons/Cloudinary.svg",
+      },
+      {
+        name: "Vercel",
+        icon: "/tech-icons/Vercel.svg",
+      },
+    ],
+    liveLink: "https://spacemediaproduction.com",
+  },
+  {
+    name: "DIGIMART",
     featured: true,
     images: [
       "/project/digimart/1.png",
@@ -131,6 +361,10 @@ export const ProjectsConstant: ProjectProps[] = [
         name: "Styled Components",
         icon: "/tech-icons/styled-components.svg",
       },
+      {
+        name: "Render",
+        icon: "/tech-icons/Render.svg",
+      },
     ],
     gitHubLinks: {
       frontEnd: "https://github.com/shamim1845/digimart-frontend",
@@ -140,7 +374,7 @@ export const ProjectsConstant: ProjectProps[] = [
   },
   {
     name: "Flow Jobs",
-    featured: true,
+    featured: false,
     images: [
       "/project/flow-jobs/1.png",
       "/project/flow-jobs/2.png",
@@ -205,7 +439,7 @@ export const ProjectsConstant: ProjectProps[] = [
       },
       {
         name: "shadcn/ui",
-        icon: "/tech-icons/shadcn/ui.svg",
+        icon: "/tech-icons/Shadcn-ui.svg",
       },
       {
         name: "Prisma",
@@ -229,7 +463,7 @@ export const ProjectsConstant: ProjectProps[] = [
   },
   {
     name: "PC Craft (PC Builder)",
-    featured: true,
+    featured: false,
     images: [
       "/project/pc-craft/1.png",
       "/project/pc-craft/2.png",

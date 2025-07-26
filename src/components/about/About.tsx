@@ -1,6 +1,4 @@
-import { Play } from "lucide-react";
 import SectionHeader from "../reuseable-components/SectionHeader";
-import { technologyList } from "./technologyListConstant";
 import { MotionDiv, MotionSection } from "../framer-motion/Motion";
 import {
   containerVariants,
@@ -33,31 +31,18 @@ const About = () => {
           variants={fadeInVariants}
           className="flex-1 text-brandSecondary text-lg"
         >
-          <p>Hello! I&apos;m Md Shamim Hossain, from Dhaka, Bangladesh.</p>
-          <br />
           <p>
-            I am a Web Developer With a strong foundation in HTML, CSS, and
-            Tailwind CSS, I specialize in creating visually stunning and
-            responsive web applications. My proficiency extends to JavaScript
-            and TypeScript, enabling me to build dynamic and engaging user
-            interfaces. I bring a wealth of experience in popular frameworks
-            like React.js, Redux, and Next.js, allowing me to transform design
-            concepts into seamless and interactive web experiences. While I have
-            a good understanding of the backend with Node.js, Express.js, and
-            MongoDB, my primary focus is on crafting exceptional front-end
-            solutions.
+            I’m a Front-End Developer at Shadhin Music Limited, focused on
+            building fast, responsive, and scalable web applications using
+            React.js, Next.js, TypeScript, and Tailwind CSS. I’m skilled in
+            state management with Redux and Context API.
           </p>
           <br />
-          <p>Here are a few technologies I’ve been working with recently:</p>
-          <br />
-          <div>
-            {technologyList.map((technology) => (
-              <div key={technology} className="flex gap-2 items-center">
-                <Play className="stroke-brandColor w-3" />
-                <span className="text-base"> {technology}</span>
-              </div>
-            ))}
-          </div>
+          <p>
+            With working knowledge of Node.js, Express.js, and MongoDB, I
+            collaborate effectively across the stack. I’m passionate about clean
+            code, modern UI, and delivering smooth user experiences.
+          </p>
         </MotionDiv>
 
         {/*My Picture */}
@@ -69,7 +54,7 @@ const About = () => {
             <div
               className="relative border-[10px] border-brandColor/20 rounded-lg w-full h-full "
               style={{
-                backgroundImage: "url('/shamim.jpg')",
+                backgroundImage: "url('/shamim-3.jpg')",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
