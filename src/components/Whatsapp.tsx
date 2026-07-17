@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { MotionDiv } from "./framer-motion/Motion";
+
 const whatsappVariants = {
   hidden: {
     opacity: 0,
@@ -21,7 +23,7 @@ const Whatsapp = () => {
   const message =
     "Hello, I've been brainstorming a project with the goal of making a positive impact. Can you assist me?";
   return (
-    <motion.div
+    <MotionDiv
       initial="hidden"
       animate="visible"
       variants={whatsappVariants}
@@ -47,7 +49,7 @@ const Whatsapp = () => {
           />
         </div>
       </a>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

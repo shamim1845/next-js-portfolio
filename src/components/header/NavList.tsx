@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { MotionDiv, MotionLi } from "../framer-motion/Motion";
 
 const fadeInVariants = {
   hidden: {
@@ -120,7 +121,7 @@ const NavList = ({ classList }: { classList?: string }) => {
       {navListConstant.map((navItem) => {
         const isActive = activeSection === navItem.id;
         return (
-          <motion.li
+          <MotionLi
             variants={fadeInVariants}
             key={navItem.name}
             className="relative py-1"
@@ -137,7 +138,7 @@ const NavList = ({ classList }: { classList?: string }) => {
               {navItem.name}
             </Link>
             {isActive && (
-              <motion.div
+              <MotionDiv
                 layoutId="activeNavIndicator"
                 className="absolute bottom-0 left-0 right-0 h-[2px] bg-brandColor rounded-full"
                 transition={{
@@ -147,7 +148,7 @@ const NavList = ({ classList }: { classList?: string }) => {
                 }}
               />
             )}
-          </motion.li>
+          </MotionLi>
         );
       })}
     </ol>

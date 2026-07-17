@@ -11,6 +11,7 @@ import SideBar from "./SideBar";
 import PublicAssets from "../public-assets/PublicAssets";
 import { motion } from "framer-motion";
 import { fadeInVariants, containerVariants } from "../framer-motion/variants";
+import { MotionDiv, MotionHeader } from "../framer-motion/Motion";
 
 const Header = () => {
   // Track scrollbar
@@ -19,7 +20,7 @@ const Header = () => {
   const isScrolled = lastScrollY > 20;
 
   return (
-    <motion.header
+    <MotionHeader
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -38,7 +39,7 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <PublicAssets />
           <ModeToggle />
-          <motion.div variants={fadeInVariants}>
+          <MotionDiv variants={fadeInVariants}>
             <Button
               variant="outline"
               className={cn(
@@ -50,13 +51,13 @@ const Header = () => {
             >
               Hire me
             </Button>
-          </motion.div>
-          <motion.div variants={fadeInVariants}>
+          </MotionDiv>
+          <MotionDiv variants={fadeInVariants}>
             <SideBar />
-          </motion.div>
+          </MotionDiv>
         </div>
       </nav>
-    </motion.header>
+    </MotionHeader>
   );
 };
 

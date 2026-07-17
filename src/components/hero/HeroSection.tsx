@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 import ScrollDown from "./ScrollDown";
 import Social from "./Social";
 import { containerVariants, fadeInVariants } from "../framer-motion/variants";
-import { MotionDiv, MotionSection } from "../framer-motion/Motion";
+import { MotionDiv, MotionSection, MotionSpan } from "../framer-motion/Motion";
 
 const socialContainerVariants = {
   hidden: {
@@ -156,7 +156,7 @@ const HeroSection = () => {
 
           <MotionDiv variants={fadeInVariants} className="flex items-center gap-2">
             <span className="text-brandColor text-xl font-semibold tracking-wide uppercase">Hi, I&apos;m</span>
-            <motion.span
+            <MotionSpan
               className="text-2xl inline-block origin-[70%_70%]"
               animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
               transition={{
@@ -167,7 +167,7 @@ const HeroSection = () => {
               }}
             >
               👋
-            </motion.span>
+            </MotionSpan>
           </MotionDiv>
 
           <MotionDiv variants={fadeInVariants}>

@@ -138,7 +138,7 @@ const About = () => {
           <div className="absolute -bottom-6 lg:right-8 -right-2 w-24 h-24 bg-dot-pattern opacity-50 dark:opacity-30 -z-10 pointer-events-none" />
 
           {/* Floating Card Wrapper */}
-          <motion.div
+          <MotionDiv
             animate={{
               y: [0, -8, 0],
             }}
@@ -168,7 +168,7 @@ const About = () => {
               {/* Tint overlay on hover */}
               <div className="absolute inset-0 bg-brandColor/5 opacity-40 group-hover:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />
             </div>
-          </motion.div>
+          </MotionDiv>
         </MotionDiv>
       </MotionDiv>
     </MotionSection>
