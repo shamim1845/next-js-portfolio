@@ -143,112 +143,6 @@ export const ProjectsConstant: ProjectProps[] = [
     liveLink: "https://loischloe.com.bd",
   },
   {
-    name: "SpaceMediaProduction",
-    featured: true,
-    images: [
-      "/project/spacemedia/spacemedia-1.png",
-      "/project/spacemedia/spacemedia-2.png",
-      "/project/spacemedia/spacemedia-3.png",
-      "/project/spacemedia/spacemedia-4.png",
-      "/project/spacemedia/spacemedia-5.png",
-    ],
-    description: (
-      <>
-        <div>
-          <p>
-            <span className="text-foreground font-semibold">
-              Project Summary :{" "}
-            </span>
-            SpaceMedia is a creative media agency website built to showcase
-            their video production, photography, and media services with smooth
-            animations, interactive layouts, and an engaging user experience.
-          </p>
-        </div>
-        <br />
-        <div>
-          <span className="text-foreground font-semibold">
-            Major Challenges :
-          </span>
-          <ul className="list-disc list-inside">
-            <li>
-              Creating an immersive and media-rich UI to highlight visual
-              content effectively.
-            </li>
-            <li>
-              Ensuring fast load times and responsiveness for high-resolution
-              media across all devices.
-            </li>
-            <li>
-              Managing animation performance while maintaining accessibility and
-              clean structure.
-            </li>
-          </ul>
-        </div>
-        <br />
-        <div>
-          <span className="text-foreground font-semibold">Technology :</span>
-          <ul className="list-disc list-inside">
-            <li>
-              <span className="text-foreground">Front-End:- </span>
-              Next.js and React.js for structure, Tailwind CSS and shadcn/ui for
-              styling and components, Framer Motion for animations, Swiper for
-              sliders, and React Player for embedded media.
-            </li>
-            <li>
-              <span className="text-foreground">Deployment & CI/CD :- </span>
-              Vercel for hosting and GitHub for version control and
-              collaboration.
-            </li>
-          </ul>
-        </div>
-      </>
-    ),
-    technology: [
-      {
-        name: "React JS",
-        icon: "/tech-icons/React.svg",
-      },
-      {
-        name: "Next JS",
-        icon: "/tech-icons/Next.js.svg",
-      },
-
-      {
-        name: "Tailwind CSS",
-        icon: "/tech-icons/Tailwind-CSS.svg",
-      },
-      {
-        name: "shadcn/ui",
-        icon: "/tech-icons/Shadcn-ui.svg",
-      },
-      {
-        name: "Swiper",
-        icon: "/tech-icons/Swiper.svg",
-      },
-      {
-        name: "Framer Motion",
-        icon: "/tech-icons/Framer-motion.svg",
-      },
-      {
-        name: "TypeScript",
-        icon: "/tech-icons/TypeScript.svg",
-      },
-      {
-        name: "Vimeo",
-        icon: "/tech-icons/Vimeo.svg",
-      },
-      {
-        name: "Cloudinary",
-        icon: "/tech-icons/Cloudinary.svg",
-      },
-      {
-        name: "Vercel",
-        icon: "/tech-icons/Vercel.svg",
-      },
-    ],
-    liveLink: "https://spacemediaproduction.com",
-  },
-  {
     name: "DIGIMART",
     featured: true,
     images: [
@@ -372,6 +266,96 @@ export const ProjectsConstant: ProjectProps[] = [
     },
     liveLink: "https://digimart-ecommerce.onrender.com",
   },
+  {
+    name: "MailCraft",
+    featured: false,
+    images: ["/project/mailcraft/mailcraft-1.png"],
+    description: (
+      <>
+        <div>
+          <p>
+            <span className="text-foreground font-semibold">
+              Project Summary :
+            </span>{" "}
+            A modern, drag-and-drop email builder built with Next.js. Create
+            beautiful, responsive email templates with an intuitive visual
+            editor.
+          </p>
+        </div>
+        <br />
+        <div>
+          <span className="text-foreground font-semibold">✨ Features :</span>{" "}
+          <ul className="list-disc list-inside">
+            <li>
+              Visual Drag-and-Drop Builder - Easily arrange email components.
+            </li>
+            <li>
+              Rich Text Editor - Format text with bold, italic, underline,
+              links, and more.
+            </li>
+            <li>
+              Multiple Block Types: Text, Images, Buttons, Headers, Footers, and
+              more.
+            </li>
+            <li>Color Customization for backgrounds, text, and elements.</li>
+            <li>Image Upload & Responsive Preview.</li>
+            <li>Export Options to HTML, copy to clipboard, or download.</li>
+            <li>Undo/Redo & Auto-Save History Management.</li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <span className="text-foreground font-semibold">Technology :</span>
+          <ul className="list-disc list-inside">
+            <li>
+              <span className="text-foreground">Core:- </span>
+              Next.js 16, React 19, TypeScript.
+            </li>
+            <li>
+              <span className="text-foreground">Styling & UI:- </span>
+              Tailwind CSS, Radix UI, Lucide React.
+            </li>
+            <li>
+              <span className="text-foreground">Functionality:- </span>
+              Zustand (State), TipTap (Rich Text), @dnd-kit (Drag & Drop), Juice
+              (Inline CSS).
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
+    technology: [
+      {
+        name: "Next.js",
+        icon: "/tech-icons/Next.js.svg",
+      },
+      {
+        name: "React.js",
+        icon: "/tech-icons/React.svg",
+      },
+      {
+        name: "TypeScript",
+        icon: "/tech-icons/TypeScript.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "/tech-icons/Tailwind-CSS.svg",
+      },
+      {
+        name: "Radix UI",
+        icon: "/tech-icons/Shadcn-ui.svg",
+      },
+      {
+        name: "dnd-kit",
+        icon: "/tech-icons/dnd-kit.svg",
+      },
+    ],
+    gitHubLinks: {
+      fullStack: "https://github.com/shamim1845/mailcraft",
+    },
+    liveLink: "https://mailcraft-eosin.vercel.app",
+  },
+
   {
     name: "Flow Jobs",
     featured: false,
@@ -794,5 +778,111 @@ export const ProjectsConstant: ProjectProps[] = [
       fullStack: "https://github.com/shamim1845/weather-app-with-express.js",
     },
     liveLink: "https://weather-app-sbrk.onrender.com/weather",
+  },
+  {
+    name: "SpaceMediaProduction",
+    featured: false,
+    images: [
+      "/project/spacemedia/spacemedia-1.png",
+      "/project/spacemedia/spacemedia-2.png",
+      "/project/spacemedia/spacemedia-3.png",
+      "/project/spacemedia/spacemedia-4.png",
+      "/project/spacemedia/spacemedia-5.png",
+    ],
+    description: (
+      <>
+        <div>
+          <p>
+            <span className="text-foreground font-semibold">
+              Project Summary :{" "}
+            </span>
+            SpaceMedia is a creative media agency website built to showcase
+            their video production, photography, and media services with smooth
+            animations, interactive layouts, and an engaging user experience.
+          </p>
+        </div>
+        <br />
+        <div>
+          <span className="text-foreground font-semibold">
+            Major Challenges :
+          </span>
+          <ul className="list-disc list-inside">
+            <li>
+              Creating an immersive and media-rich UI to highlight visual
+              content effectively.
+            </li>
+            <li>
+              Ensuring fast load times and responsiveness for high-resolution
+              media across all devices.
+            </li>
+            <li>
+              Managing animation performance while maintaining accessibility and
+              clean structure.
+            </li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <span className="text-foreground font-semibold">Technology :</span>
+          <ul className="list-disc list-inside">
+            <li>
+              <span className="text-foreground">Front-End:- </span>
+              Next.js and React.js for structure, Tailwind CSS and shadcn/ui for
+              styling and components, Framer Motion for animations, Swiper for
+              sliders, and React Player for embedded media.
+            </li>
+            <li>
+              <span className="text-foreground">Deployment & CI/CD :- </span>
+              Vercel for hosting and GitHub for version control and
+              collaboration.
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
+    technology: [
+      {
+        name: "React JS",
+        icon: "/tech-icons/React.svg",
+      },
+      {
+        name: "Next JS",
+        icon: "/tech-icons/Next.js.svg",
+      },
+
+      {
+        name: "Tailwind CSS",
+        icon: "/tech-icons/Tailwind-CSS.svg",
+      },
+      {
+        name: "shadcn/ui",
+        icon: "/tech-icons/Shadcn-ui.svg",
+      },
+      {
+        name: "Swiper",
+        icon: "/tech-icons/Swiper.svg",
+      },
+      {
+        name: "Framer Motion",
+        icon: "/tech-icons/Framer-motion.svg",
+      },
+      {
+        name: "TypeScript",
+        icon: "/tech-icons/TypeScript.svg",
+      },
+      {
+        name: "Vimeo",
+        icon: "/tech-icons/Vimeo.svg",
+      },
+      {
+        name: "Cloudinary",
+        icon: "/tech-icons/Cloudinary.svg",
+      },
+      {
+        name: "Vercel",
+        icon: "/tech-icons/Vercel.svg",
+      },
+    ],
+    liveLink: "https://spacemediaproduction.com",
   },
 ];
