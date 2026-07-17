@@ -7,7 +7,7 @@ import Achievements from "@/components/achievements/Achievements";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-6 md:gap-8">
       <HeroSection />
       <About />
       <Skills />

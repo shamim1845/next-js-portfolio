@@ -38,14 +38,14 @@ export function ModeToggle() {
             <span className="sr-only">Toggle theme</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="">
-          <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuContent align="end" className="bg-background/95 border border-border/40 backdrop-blur-md min-w-[6.5rem]">
+          <DropdownMenuItem onClick={() => setTheme("light")} className="font-code text-xs uppercase tracking-wider cursor-pointer">
             Light
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setTheme("dark")}>
+          <DropdownMenuItem onClick={() => setTheme("dark")} className="font-code text-xs uppercase tracking-wider cursor-pointer">
             Dark
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setTheme("system")}>
+          <DropdownMenuItem onClick={() => setTheme("system")} className="font-code text-xs uppercase tracking-wider cursor-pointer">
             System
           </DropdownMenuItem>
         </DropdownMenuContent>

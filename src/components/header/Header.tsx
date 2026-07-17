@@ -14,8 +14,9 @@ import { fadeInVariants, containerVariants } from "../framer-motion/variants";
 
 const Header = () => {
   // Track scrollbar
-  const { lastScrollY, scrolling } = useScrollHandler();
+  const { lastScrollY } = useScrollHandler();
   const router = useRouter();
+  const isScrolled = lastScrollY > 20;
 
   return (
     <motion.header
@@ -23,13 +24,13 @@ const Header = () => {
       initial="hidden"
       animate="visible"
       className={cn(
-        "container flex items-center h-[5rem] px-5 md:px-10 bg-background z-50",
-        scrolling === "top" &&
-          lastScrollY > 300 &&
-          "sticky top-0 bg-background/95 transition-all"
+        "sticky left-0 right-0 top-0 z-50 flex items-center justify-center w-full transition-all duration-500",
+        isScrolled
+          ? "glass-panel h-[4.5rem] border-t-0 border-x-0 border-b border-border/50 shadow-md shadow-brandColor/5"
+          : "bg-transparent h-[5.5rem] border-transparent"
       )}
     >
-      <nav className="flex justify-between items-center w-full">
+      <nav className="container flex justify-between items-center w-full px-5 md:px-10 h-full">
         <Link href={"/"}>
           <Logo />
         </Link>
@@ -40,7 +41,10 @@ const Header = () => {
           <motion.div variants={fadeInVariants}>
             <Button
               variant="outline"
-              className="hidden lg:block "
+              className={cn(
+                "hidden lg:block transition-all duration-500 rounded-full font-code tracking-wider font-semibold",
+                isScrolled ? "h-9 text-xs px-4" : "h-10 text-sm px-5"
+              )}
               onClick={() => router.push("/#contact")}
               aria-label="Hire me"
             >

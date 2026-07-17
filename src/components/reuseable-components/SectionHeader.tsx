@@ -12,20 +12,20 @@ const SectionHeader = ({
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center mb-10 ",
+        "flex flex-col items-center justify-center mb-10 select-none",
         className
       )}
     >
       <h4
         className={cn(
-          "text-2xl md:text-3xl font-bold mb-5 before:font-semibold before:text-base before:md:text-xl before:align-middle before:text-brandColor before:mr-2",
+          "text-xl md:text-2xl font-bold font-code uppercase tracking-wider mb-4 before:font-mono before:text-xs before:md:text-sm before:align-baseline before:text-brandColor before:mr-2",
           titleClassName
         )}
       >
         {title}
       </h4>
-      <div className="w-[10rem] h-1.5 bg-brandColor/20 overflow-hidden rounded">
-        <div className="w-1.5 h-1.5 bg-brandColor rounded-full animate_left_to_right"></div>
+      <div className="w-24 h-[3px] bg-brandColor/20 overflow-hidden rounded-full">
+        <div className="w-1.5 h-[3px] bg-brandColor rounded-full animate_left_to_right"></div>
       </div>
     </div>
   );

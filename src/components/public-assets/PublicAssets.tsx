@@ -27,7 +27,7 @@ const PublicAssets = () => {
   return (
     <motion.div variants={fadeInVariants}>
       <DropdownMenu>
-        <DropdownMenuTrigger className="hover:text-brandColor transition-all border-none outline-none">
+        <DropdownMenuTrigger className="hover:text-brandColor transition-all border-none outline-none text-sm font-semibold tracking-wider font-code">
           Assets
         </DropdownMenuTrigger>
         <DropdownMenuContent>

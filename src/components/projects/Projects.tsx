@@ -17,7 +17,7 @@ const Projects = () => {
     >
       <SectionHeader
         title="Projects"
-        className="md:items-start"
+        className=""
         titleClassName="before:content-['03.']"
       />
 
@@ -44,15 +44,15 @@ const Projects = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="mb-10 flex flex-col items-center justify-center">
-          <h4 className="text-2xl font-bold ">Other Noteworthy Projects</h4>
+        <div className="mb-10 flex flex-col items-center justify-center gap-1.5">
+          <h4 className="text-2xl font-bold tracking-wide">Other Noteworthy Projects</h4>
           <span>
             <a
               href="https://github.com/shamim1845?tab=repositories"
-              className="text-sm md:text-base text-brandColor hover:underline transition-all"
+              className="text-xs sm:text-sm font-code text-brandColor/80 hover:text-brandColor hover:underline transition-all"
               target="_blank"
             >
-              view the repositories
+              {"// view all repositories"}
             </a>
           </span>
         </div>

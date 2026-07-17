@@ -11,8 +11,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        code: ["var(--font-code)", "monospace"],
+      },
       colors: {
-        brandColor: "#B06223",
+        brandColor: "hsl(var(--brand-color))",
         brandSecondary: "var(--brand-secondary)",
 
         border: "hsl(var(--border))",

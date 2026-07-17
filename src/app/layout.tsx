@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
-import { DM_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Fira_Code } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
@@ -8,12 +8,18 @@ import { Toaster } from "@/components/ui/toaster";
 import { constant } from "./constant";
 import Whatsapp from "@/components/Whatsapp";
 import { GoogleTagManager } from "@next/third-parties/google";
-import TrackScroll from "@/components/TrackScroll";
 import ScrollToTopBtn from "@/components/ScrollToTopBtn";
 
 // font
-const font = DM_Sans({
+const font = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  display: "swap",
+});
+
+const codeFont = Fira_Code({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-code",
 });
 
 // constants
@@ -84,7 +90,8 @@ export const metadata: Metadata = {
 
 // viewport
 export const viewport: Viewport = {
-  width: 1,
+  width: "device-width",
+  initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#09090B" },
     { media: "(prefers-color-scheme: light)", color: "#FAFAFA" },
@@ -105,16 +112,23 @@ export default function RootLayout({
           content="7H40hIgx1qvuJZ_9n-jZ9Fvg-HPJbOeVmv7kjM4fYZc"
         />
       </head>
-      <body className={`${font.className}`}>
-        <TrackScroll />
+      <body className={`${font.className} ${codeFont.variable} relative min-h-screen antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          {/* Subtle grid background pattern */}
+          <div className="fixed inset-0 -z-50 bg-grid-pattern opacity-100 pointer-events-none" />
+
+          {/* Decorative glowing blobs */}
+          <div className="fixed inset-0 -z-40 overflow-hidden pointer-events-none">
+            <div className="absolute top-[-10%] left-[-10%] w-[50rem] h-[50rem] rounded-full bg-brandColor/5 dark:bg-brandColor/3 blur-[120px]" />
+            <div className="absolute bottom-[20%] right-[-10%] w-[45rem] h-[45rem] rounded-full bg-brandColor/5 dark:bg-brandColor/3 blur-[120px]" />
+          </div>
           <Header />
-          <main className={"container px-5 md:px-10"}>{children}</main>
+          <main className="container relative px-5 md:px-10 overflow-hidden">{children}</main>
           <Toaster />
           <Whatsapp />
           <Footer />
