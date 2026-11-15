@@ -40,14 +40,14 @@ const ProjectCard = ({
                 key={img}
                 data-fancybox={`gallery-${project.name}`}
                 href={img}
-                className="block relative w-full h-full overflow-hidden rounded-2xl"
+                className="absolute inset-0 block overflow-hidden rounded-2xl"
               >
                 <Image
                   alt={`${project.name} screenshot`}
                   src={img}
                   fill
                   sizes="(max-width: 1200px) 100vw, 1060px"
-                  className="object-cover hover:scale-[1.02] transition-transform duration-500 rounded-2xl"
+                  className="object-cover object-top hover:scale-[1.02] transition-transform duration-500 rounded-2xl"
                 />
                 {/* Overlay Tint */}
                 <div className="absolute inset-0 bg-brandColor/5 opacity-30 group-hover/img:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />

@@ -138,7 +138,7 @@ const HeroSection = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="relative flex flex-col justify-between w-full  mx-auto z-10"
+      className="relative flex flex-col justify-between w-full max-w-[70rem] mx-auto z-10"
     >
       {/* Background glow blobs */}
       <div className="absolute top-1/4 left-0 w-[350px] h-[350px] bg-brandColor/10 dark:bg-brandColor/5 rounded-full blur-[120px] -z-10 pointer-events-none animate-pulse duration-[8000ms]" />
@@ -348,7 +348,7 @@ const HeroSection = () => {
               <div className="pt-3 border-t border-border/10 mt-3">
                 <span className="text-zinc-400">&gt; developer.sayHello()</span>
               </div>
-              <div className="text-brandColor font-semibold italic">
+              <div className="text-orange-400 font-semibold italic">
                 &quot;Building fast, responsive, and scalable web apps with passion.&quot;
               </div>
               <div className="flex items-center">

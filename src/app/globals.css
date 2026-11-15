@@ -46,7 +46,7 @@
     --foreground: 0 0% 98%;
 
     --brand-color: 24 95% 58%;
-    --brand-solid: 24 95% 40%;
+    --brand-solid: 24 95% 38%;
     --brand-secondary: #a1a1aa;
 
     --card: 240 10% 6%;
@@ -434,6 +434,9 @@
 .early-card-media {
   aspect-ratio: 16 / 10;
 }
+.early-card-desc {
+  display: none;
+}
 @media (hover: hover) and (pointer: fine) {
   .early-card {
     aspect-ratio: 16 / 10;
@@ -441,6 +444,12 @@
   .early-card-media {
     aspect-ratio: auto;
     height: 100%;
+  }
+  .early-card-desc {
+    display: block;
+  }
+  .early-card-details {
+    display: none;
   }
   .early-card-panel {
     position: absolute;

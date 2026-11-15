@@ -48,9 +48,18 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
           <h4 className="text-lg font-bold text-foreground group-hover:text-brandColor transition-colors duration-300">
             {project.name}
           </h4>
-          <div className="text-xs sm:text-sm text-muted-foreground dark:text-zinc-300/90 leading-relaxed mt-1">
+          {/* Pointer devices: full description inside the hover panel. */}
+          <div className="early-card-desc text-xs sm:text-sm text-muted-foreground dark:text-zinc-300/90 leading-relaxed mt-1">
             {project.description}
           </div>
+          {/* Touch devices: the same description, collapsed by default so ten
+              cards do not become ten screens of text. */}
+          <details className="early-card-details text-sm text-muted-foreground dark:text-zinc-300/90 leading-relaxed">
+            <summary className="flex min-h-[44px] cursor-pointer items-center font-code text-xs font-semibold text-brandColor">
+              Project details
+            </summary>
+            <div className="pb-1">{project.description}</div>
+          </details>
         </div>
 
         {/* Separator & Monospace Tech Stack Tags */}
