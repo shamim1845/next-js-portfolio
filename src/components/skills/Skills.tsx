@@ -64,7 +64,7 @@ const Skills = () => {
                 <div className="w-full bg-card/20 dark:bg-zinc-950/20 border border-border/70 dark:border-border/30 backdrop-blur-md rounded-2xl p-4 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-brandColor/5 transition-all duration-300">
                   {/* Category Title Header */}
                   <div className="flex items-center gap-2 pb-3.5 border-b border-border/20">
-                    <span className="text-brandColor font-mono text-base font-bold tracking-wide select-none">{"@"}</span>
+                    <span className="text-brandColor font-mono text-base font-bold select-none">{"@"}</span>
                     <h3 className="text-sm sm:text-base font-bold tracking-wider text-foreground font-code uppercase">
                       {skill.btnText}
                     </h3>
@@ -92,7 +92,7 @@ const Skills = () => {
                             className="object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <span className="text-xs sm:text-sm font-semibold tracking-wide text-zinc-700 dark:text-zinc-300 group-hover:text-brandColor transition-colors duration-300">
+                        <span className="text-xs sm:text-sm font-semibold text-zinc-700 dark:text-zinc-300 group-hover:text-brandColor transition-colors duration-300">
                           {tech.name}
                         </span>
                       </MotionDiv>

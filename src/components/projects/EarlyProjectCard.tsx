@@ -45,10 +45,10 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
 
         {/* Title & Description Container */}
         <div className="flex flex-col gap-1.5">
-          <h4 className="text-lg font-bold tracking-wide text-foreground group-hover:text-brandColor transition-colors duration-300">
+          <h4 className="text-lg font-bold text-foreground group-hover:text-brandColor transition-colors duration-300">
             {project.name}
           </h4>
-          <div className="text-xs sm:text-sm text-muted-foreground dark:text-zinc-300/90 leading-relaxed tracking-wide mt-1">
+          <div className="text-xs sm:text-sm text-muted-foreground dark:text-zinc-300/90 leading-relaxed mt-1">
             {project.description}
           </div>
         </div>
@@ -59,7 +59,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
             {project.technology.map((tech) => (
               <span
                 key={tech.name}
-                className="text-[10px] font-code px-2 py-0.5 rounded-md bg-brandColor/5 dark:bg-zinc-950/40 border border-border/20 text-brandColor dark:text-brandColor/75 select-none"
+                className="text-[11px] font-code px-2 py-0.5 rounded-md bg-brandColor/5 dark:bg-zinc-950/40 border border-border/20 text-brandColor dark:text-brandColor/75 select-none"
               >
                 {tech.name}
               </span>

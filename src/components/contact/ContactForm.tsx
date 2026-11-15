@@ -64,7 +64,7 @@ function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
+              <FormLabel className="font-code text-[11px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
                 Name
               </FormLabel>
               <FormControl>
@@ -84,7 +84,7 @@ function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
+              <FormLabel className="font-code text-[11px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
                 Email
               </FormLabel>
               <FormControl>
@@ -105,7 +105,7 @@ function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
+              <FormLabel className="font-code text-[11px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
                 Message
               </FormLabel>
               <FormControl>

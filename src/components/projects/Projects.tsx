@@ -44,7 +44,7 @@ const Projects = () => {
         viewport={{ once: true }}
       >
         <div className="mb-8 flex flex-col items-center md:items-start justify-center gap-1.5">
-          <h3 className="text-2xl font-bold tracking-wide">Other Noteworthy Projects</h3>
+          <h3 className="text-lg md:text-xl font-bold font-code uppercase tracking-wider">Other Noteworthy Projects</h3>
           <span>
             <a
               href="https://github.com/shamim1845?tab=repositories"

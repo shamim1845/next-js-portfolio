@@ -58,7 +58,7 @@ const Contact = () => {
           className="flex-1 w-full lg:max-w-[380px] flex flex-col gap-4 shrink-0"
         >
           <div className="mb-2">
-            <h3 className="text-xl font-bold tracking-wide text-foreground">
+            <h3 className="text-xl font-bold text-foreground">
               Contact Information
             </h3>
             <p className="text-sm text-brandSecondary mt-1 leading-relaxed">
@@ -79,7 +79,7 @@ const Contact = () => {
           className="flex-[1.4] w-full bg-card/30 dark:bg-zinc-950/25 border border-border/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl hover:border-brandColor/20 hover:shadow-brandColor/[0.02] transition-all duration-500"
         >
           <div className="mb-6">
-            <h3 className="text-xl font-bold tracking-wide text-foreground">
+            <h3 className="text-xl font-bold text-foreground">
               Get in Touch
             </h3>
             <p className="text-sm text-brandSecondary mt-1 leading-relaxed">

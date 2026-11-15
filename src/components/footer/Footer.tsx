@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="text-xs text-muted-foreground flex items-center select-none">
             Built with <Heart className="w-3.5 h-3.5 text-brandColor fill-brandColor animate-pulse mx-1.5" /> by Md Shamim Hossain
           </div>
-          <p className="text-[10px] text-muted-foreground/70 tracking-wider select-none">
+          <p className="text-[11px] text-muted-foreground/70 tracking-wider select-none">
             &copy; {new Date().getFullYear()} All rights reserved.
           </p>
         </div>

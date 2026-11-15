@@ -62,7 +62,7 @@ const About = () => {
           variants={fadeInVariants}
           className="flex-[1.2] flex flex-col gap-6 w-full"
         >
-          <div className="text-brandSecondary text-base sm:text-lg leading-relaxed tracking-wide space-y-4">
+          <div className="text-brandSecondary text-base sm:text-lg leading-relaxed space-y-4">
             <p>
               I’m a Front-End Developer at{" "}
               <strong className="text-foreground dark:text-zinc-100 font-semibold">
@@ -110,10 +110,10 @@ const About = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">
+                  <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">
                     {stat.title}
                   </p>
-                  <p className="text-lg font-extrabold text-foreground tracking-wide mt-0.5">
+                  <p className="text-lg font-extrabold text-foreground mt-0.5">
                     {stat.value}
                   </p>
                   <p className="text-xs text-brandSecondary mt-1 leading-normal">

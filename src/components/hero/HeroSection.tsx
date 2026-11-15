@@ -150,7 +150,7 @@ const HeroSection = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 shadow-[0_0_8px_#10b981]"></span>
               </span>
-              <span className="tracking-wide uppercase text-[10px]">Open for opportunities</span>
+              <span className="tracking-wide uppercase text-[11px]">Open for opportunities</span>
             </div>
           </MotionDiv>
 
@@ -173,7 +173,7 @@ const HeroSection = () => {
           <MotionDiv variants={fadeInVariants}>
             {/* The single page h1: the name, plus the lead title for assistive tech.
                 The animated role line below is decorative and hidden from it. */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide leading-none text-foreground">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none text-foreground">
               Md{" "}
               <span className="bg-gradient-to-r from-brandColor via-orange-400 to-amber-500 bg-clip-text text-transparent drop-shadow-sm">
                 Shamim Hossain
@@ -185,11 +185,11 @@ const HeroSection = () => {
           <MotionDiv variants={fadeInVariants} className="w-full py-2">
             <div className="relative w-full" aria-hidden="true">
               {/* Invisible decoy to reserve space and prevent layout shifts */}
-              <p className="invisible select-none pointer-events-none max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide leading-tight">
+              <p className="invisible select-none pointer-events-none max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
                 Full Stack JavaScript Developer
               </p>
               <div className="absolute inset-0 w-full h-full flex items-center">
-                <p className="max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-foreground dark:text-zinc-100 leading-tight">
+                <p className="max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground dark:text-zinc-100 leading-tight">
                   {currentText}
                   <span className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-brandColor ml-1.5 align-middle animate-pulse" />
                 </p>
@@ -198,7 +198,7 @@ const HeroSection = () => {
           </MotionDiv>
 
           <MotionDiv variants={fadeInVariants}>
-            <p className="max-w-[540px] text-brandSecondary text-base sm:text-lg leading-relaxed tracking-wide mt-4">
+            <p className="max-w-[540px] text-brandSecondary text-base sm:text-lg leading-relaxed mt-4">
               JavaScript Developer with{" "}
               <strong className="text-foreground dark:text-zinc-200 font-semibold">
                 2+ years of experience

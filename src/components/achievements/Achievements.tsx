@@ -97,10 +97,10 @@ const Achievements = () => {
 
                 {/* Caption Bar */}
                 <div className="mt-4 pt-3 border-t border-border/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 w-full shrink-0">
-                  <span className="text-sm font-semibold tracking-wide text-foreground group-hover:text-brandColor transition-colors duration-300">
+                  <span className="text-sm font-semibold text-foreground group-hover:text-brandColor transition-colors duration-300">
                     {achivement.title}
                   </span>
-                  <span className="text-[10px] font-code text-muted-foreground group-hover:text-brandColor/80 uppercase tracking-widest transition-colors duration-300 shrink-0">
+                  <span className="text-[11px] font-code text-muted-foreground group-hover:text-brandColor/80 uppercase tracking-widest transition-colors duration-300 shrink-0">
                     {achivement.platform}
                   </span>
                 </div>

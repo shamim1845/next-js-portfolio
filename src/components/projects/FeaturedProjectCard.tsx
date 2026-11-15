@@ -72,7 +72,7 @@ const ProjectCard = ({
             <span className="text-xs font-code font-bold tracking-widest text-brandColor uppercase">
               Featured Project
             </span>
-            <h3 className="text-xl sm:text-2xl font-extrabold tracking-wide text-foreground mt-0.5">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-foreground mt-0.5">
               {project.name}
             </h3>
           </div>
@@ -84,7 +84,7 @@ const ProjectCard = ({
         </div>
 
         {/* Rich Description */}
-        <div className="text-sm text-muted-foreground dark:text-zinc-300/90 tracking-wide leading-relaxed space-y-4">
+        <div className="text-sm text-muted-foreground dark:text-zinc-300/90 leading-relaxed space-y-4 max-w-[75ch]">
           {project.description}
         </div>
 
