@@ -86,7 +86,7 @@ const Achievements = () => {
                 <div className="w-full aspect-[4/3] sm:aspect-[16/11] relative overflow-hidden rounded-xl border border-border/20 bg-card/30 dark:bg-zinc-950/20 z-0 shrink-0">
                   <Image
                     src={achivement.img}
-                    alt={achivement.alt}
+                    alt={`${achivement.title} certificate from ${achivement.platform}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 520px"
                     className="object-cover hover:scale-[1.02] transition-transform duration-500 rounded-xl"

@@ -23,7 +23,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
         {project.images?.length ? (
           <>
             <Image
-              alt={project.name}
+              alt={`${project.name} screenshot`}
               src={project.images[0]}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -51,7 +51,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                   <TooltipTrigger asChild>
                     <a
                       href={project.gitHubLinks.frontEnd}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="p-2 rounded-lg border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
                       aria-label="GitHub Front-End Code"
                     >
@@ -72,7 +72,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                   <TooltipTrigger asChild>
                     <a
                       href={project.gitHubLinks.backEnd}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="p-2 rounded-lg border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
                       aria-label="GitHub Back-End Code"
                     >
@@ -93,7 +93,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                   <TooltipTrigger asChild>
                     <a
                       href={project.gitHubLinks.fullStack}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="p-2 rounded-lg border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
                       aria-label="GitHub Code"
                     >
@@ -114,7 +114,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
                   <TooltipTrigger asChild>
                     <a
                       href={project.liveLink}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="p-2 rounded-lg border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
                       aria-label="Live Demo Link"
                     >

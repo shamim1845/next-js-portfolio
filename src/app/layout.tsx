@@ -108,7 +108,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta
           name="google-site-verification"
@@ -130,17 +130,18 @@ export default function RootLayout({
             <div className="absolute top-[-10%] left-[-10%] w-[50rem] h-[50rem] rounded-full bg-brandColor/5 dark:bg-brandColor/3 blur-[120px]" />
             <div className="absolute bottom-[20%] right-[-10%] w-[45rem] h-[45rem] rounded-full bg-brandColor/5 dark:bg-brandColor/3 blur-[120px]" />
           </div>
+          <a href="#main" className="skip-link">Skip to content</a>
           <Header />
-          <main className="container relative px-5 md:px-10 overflow-hidden">{children}</main>
+          <main id="main" className="container relative px-5 md:px-10 overflow-hidden">{children}</main>
           <Toaster />
           <Whatsapp />
           <Footer />
           <ScrollToTopBtn />
         </ThemeProvider>
       </body>
-      <GoogleTagManager
-        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
-      />
+      {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID ? (
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID} />
+      ) : null}
     </html>
   );
 }

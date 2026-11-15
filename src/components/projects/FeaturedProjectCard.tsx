@@ -50,7 +50,7 @@ const ProjectCard = ({
                 className="block relative w-full h-full overflow-hidden rounded-2xl"
               >
                 <Image
-                  alt={project.name}
+                  alt={`${project.name} screenshot`}
                   src={img}
                   fill
                   sizes="(max-width: 1200px) 100vw, 1060px"
@@ -79,9 +79,9 @@ const ProjectCard = ({
             <span className="text-xs font-code font-bold tracking-widest text-brandColor uppercase">
               Featured Project
             </span>
-            <h4 className="text-xl sm:text-2xl font-extrabold tracking-wide text-foreground mt-0.5">
+            <h3 className="text-xl sm:text-2xl font-extrabold tracking-wide text-foreground mt-0.5">
               {project.name}
-            </h4>
+            </h3>
           </div>
 
           {/* Action Link Icons */}
@@ -93,7 +93,7 @@ const ProjectCard = ({
                   <TooltipTrigger asChild>
                     <a
                       href={project.gitHubLinks.frontEnd}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="p-2.5 rounded-xl border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
                       aria-label="GitHub Front-End Code"
                     >
@@ -114,7 +114,7 @@ const ProjectCard = ({
                   <TooltipTrigger asChild>
                     <a
                       href={project.gitHubLinks.backEnd}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="p-2.5 rounded-xl border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
                       aria-label="GitHub Back-End Code"
                     >
@@ -135,7 +135,7 @@ const ProjectCard = ({
                   <TooltipTrigger asChild>
                     <a
                       href={project.gitHubLinks.fullStack}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="p-2.5 rounded-xl border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
                       aria-label="GitHub Code"
                     >
@@ -156,7 +156,7 @@ const ProjectCard = ({
                   <TooltipTrigger asChild>
                     <a
                       href={project.liveLink}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="p-2.5 rounded-xl border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
                       aria-label="Live Demo Link"
                     >

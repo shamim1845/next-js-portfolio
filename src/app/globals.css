@@ -158,7 +158,7 @@
   }
 
   .sicial_icon {
-    @apply hover:stroke-brandColor cursor-pointer transition-all hover:-translate-y-1;
+    @apply cursor-pointer transition-all group-hover:stroke-brandColor group-hover:-translate-y-0.5;
   }
 
   /*  animation  */
@@ -395,4 +395,26 @@
       box-shadow: inset 160px -160px 0px 5px rgba(0, 0, 0, 0.4);
     }
   }
+}
+
+/* One focus ring everywhere: 2px brand ring, 2px off the control.
+   Unlayered so it wins over per-component focus utilities. */
+:where(a, button, input, textarea, select, summary, [role="tab"], [role="menuitem"], [tabindex]):focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+.skip-link:focus-visible {
+  top: 1rem;
 }

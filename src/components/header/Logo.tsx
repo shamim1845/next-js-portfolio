@@ -18,7 +18,7 @@ const Logo = () => {
     <motion.div variants={fadeInVariants}>
       <Image
         src={"/logo-full.png"}
-        alt="logo"
+        alt="SHAMIM"
         width={760}
         height={240}
         priority

@@ -11,7 +11,14 @@ const SideBar = () => {
     <div className="lg:hidden h-full">
       <Sheet>
         <SheetTrigger asChild>
-          <Menu className="cursor-pointer" role="menubar" />
+          <Button
+            variant="icon"
+            size="icon"
+            className="h-11 w-11"
+            aria-label="Open navigation menu"
+          >
+            <Menu aria-hidden="true" />
+          </Button>
         </SheetTrigger>
 
         <SheetContent className="w-[300px] flex flex-col justify-center items-center gap-10">

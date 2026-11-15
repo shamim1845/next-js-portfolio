@@ -171,26 +171,28 @@ const HeroSection = () => {
           </MotionDiv>
 
           <MotionDiv variants={fadeInVariants}>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide leading-none text-foreground">
+            {/* The single page h1: the name, plus the lead title for assistive tech.
+                The animated role line below is decorative and hidden from it. */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide leading-none text-foreground">
               Md{" "}
               <span className="bg-gradient-to-r from-brandColor via-orange-400 to-amber-500 bg-clip-text text-transparent drop-shadow-sm">
                 Shamim Hossain
               </span>
-              .
-            </h2>
+              .<span className="sr-only"> Full Stack JavaScript Developer</span>
+            </h1>
           </MotionDiv>
 
           <MotionDiv variants={fadeInVariants} className="w-full py-2">
-            <div className="relative w-full">
+            <div className="relative w-full" aria-hidden="true">
               {/* Invisible decoy to reserve space and prevent layout shifts */}
-              <h1 className="invisible select-none pointer-events-none max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide leading-tight">
+              <p className="invisible select-none pointer-events-none max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide leading-tight">
                 Full Stack JavaScript Developer
-              </h1>
+              </p>
               <div className="absolute inset-0 w-full h-full flex items-center">
-                <h1 className="max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-foreground dark:text-zinc-100 leading-tight">
+                <p className="max-w-[750px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-foreground dark:text-zinc-100 leading-tight">
                   {currentText}
                   <span className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-brandColor ml-1.5 align-middle animate-pulse" />
-                </h1>
+                </p>
               </div>
             </div>
           </MotionDiv>

@@ -31,7 +31,7 @@ const Whatsapp = () => {
     >
       <a 
         href={`https://wa.me/8801631132907?text=${encodeURIComponent(message)}`} 
-        target="_blank"
+        target="_blank" rel="noopener noreferrer"
         className="relative flex items-center justify-center group"
         aria-label="Contact on WhatsApp"
       >
@@ -42,7 +42,7 @@ const Whatsapp = () => {
         <div className="relative z-10 w-[45px] h-[45px] md:w-[50px] md:h-[50px] lg:w-[56px] lg:h-[56px] rounded-full shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/30 hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center">
           <Image
             src="/whatsapp.svg"
-            alt="whatsapp"
+            alt=""
             width={100}
             height={100}
             className="w-full h-full"

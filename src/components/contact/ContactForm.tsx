@@ -69,7 +69,8 @@ function ContactForm() {
               </FormLabel>
               <FormControl>
                 <Input 
-                  placeholder="Enter your name" 
+                  placeholder="Enter your name"
+                  autoComplete="name" 
                   {...field} 
                   className="bg-background/50 dark:bg-zinc-950/40 border border-border/60 hover:border-border/80 focus-visible:border-brandColor focus-visible:ring-brandColor/25 rounded-2xl px-4 py-3.5 placeholder:text-muted-foreground/60 transition-all duration-300 w-full font-sans text-sm focus-visible:ring-offset-0 focus-visible:ring-1" 
                 />
@@ -88,7 +89,9 @@ function ContactForm() {
               </FormLabel>
               <FormControl>
                 <Input 
-                  placeholder="Enter your email" 
+                  placeholder="Enter your email"
+                  type="email"
+                  autoComplete="email" 
                   {...field} 
                   className="bg-background/50 dark:bg-zinc-950/40 border border-border/60 hover:border-border/80 focus-visible:border-brandColor focus-visible:ring-brandColor/25 rounded-2xl px-4 py-3.5 placeholder:text-muted-foreground/60 transition-all duration-300 w-full font-sans text-sm focus-visible:ring-offset-0 focus-visible:ring-1" 
                 />

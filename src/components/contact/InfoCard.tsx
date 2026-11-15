@@ -9,9 +9,9 @@ const InfoCard = ({
         {info.icon}
       </div>
       <div className="flex-1 min-w-0">
-        <h6 className="text-[10px] font-code font-bold tracking-widest text-zinc-500 uppercase mb-1">
+        <p className="text-[10px] font-code font-bold tracking-widest text-zinc-500 uppercase mb-1">
           {info.title}
-        </h6>
+        </p>
         {info.data.map((val) => (
           <div key={val} className="text-sm sm:text-base font-extrabold text-foreground group-hover:text-brandColor/90 transition-colors duration-300 truncate leading-snug">
             {val}

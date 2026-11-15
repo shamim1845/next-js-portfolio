@@ -31,8 +31,8 @@ const Header = () => {
           : "bg-transparent h-[5.5rem] border-transparent"
       )}
     >
-      <nav className="container flex justify-between items-center w-full px-5 md:px-10 h-full">
-        <Link href={"/"}>
+      <nav aria-label="Main" className="container flex justify-between items-center w-full px-5 md:px-10 h-full">
+        <Link href={"/"} aria-label="Md Shamim Hossain, home" className="rounded-md">
           <Logo />
         </Link>
         <NavList classList="hidden lg:flex" />

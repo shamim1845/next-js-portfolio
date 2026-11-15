@@ -27,14 +27,14 @@ const PublicAssets = () => {
   return (
     <motion.div variants={fadeInVariants}>
       <DropdownMenu>
-        <DropdownMenuTrigger className="hover:text-brandColor transition-all border-none outline-none text-sm font-semibold tracking-wider font-code">
+        <DropdownMenuTrigger className="min-h-[44px] px-2 rounded-md hover:text-brandColor transition-colors border-none text-sm font-semibold tracking-wider font-code">
           Assets
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuLabel>Free Useful Documents</DropdownMenuLabel>
           <DropdownMenuSeparator />
           {freeDocsList.map((doc) => (
-            <DropdownMenuItem key={doc.name}>
+            <DropdownMenuItem key={doc.name} asChild className="min-h-[44px] cursor-pointer">
               <Link href={doc.link}>{doc.name}</Link>
             </DropdownMenuItem>
           ))}
