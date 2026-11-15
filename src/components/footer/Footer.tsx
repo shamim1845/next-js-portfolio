@@ -19,7 +19,7 @@ const Footer = () => {
         {/* Right Side: Signature & Copyright */}
         <div className="flex flex-col items-center md:items-end gap-1.5 font-code">
           <div className="text-xs text-muted-foreground flex items-center select-none">
-            Built with <Heart className="w-3.5 h-3.5 text-brandColor fill-brandColor animate-pulse mx-1.5" /> by Md Shamim Hossain
+            Built with <Heart className="w-3.5 h-3.5 text-brandColor fill-brandColor mx-1.5" /> by Md Shamim Hossain
           </div>
           <p className="text-[11px] text-muted-foreground/70 tracking-wider select-none">
             &copy; {new Date().getFullYear()} All rights reserved.

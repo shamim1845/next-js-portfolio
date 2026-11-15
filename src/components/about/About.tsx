@@ -160,9 +160,9 @@ const About = () => {
               />
               {/* Ledger Line Shimmers (Polished) */}
               <span className="absolute -top-1 left-0 z-20 h-0.5 w-12 animate_ledger_left_right rounded-full bg-gradient-to-r from-transparent to-brandColor"></span>
-              <span className="absolute top-auto -bottom-1 left-auto z-20 h-0.5 w-12 animate_ledger_right_left rounded-full bg-gradient-to-r from-brandColor to-transparent"></span>
-              <span className="absolute -left-1 top-auto z-20 h-12 w-0.5 animate_ledger_bottom_top rounded-full bg-gradient-to-t from-transparent to-brandColor"></span>
-              <span className="absolute left-auto -right-1 z-20 h-12 w-0.5 animate_ledger_top_bottom rounded-full bg-gradient-to-b from-transparent to-brandColor"></span>
+              <span className="absolute top-auto -bottom-1 right-0 z-20 h-0.5 w-12 animate_ledger_right_left rounded-full bg-gradient-to-r from-brandColor to-transparent"></span>
+              <span className="absolute -left-1 bottom-0 z-20 h-12 w-0.5 animate_ledger_bottom_top rounded-full bg-gradient-to-t from-transparent to-brandColor"></span>
+              <span className="absolute top-0 -right-1 z-20 h-12 w-0.5 animate_ledger_top_bottom rounded-full bg-gradient-to-b from-transparent to-brandColor"></span>
 
               {/* Tint overlay on hover */}
               <div className="absolute inset-0 bg-brandColor/5 opacity-40 group-hover:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />

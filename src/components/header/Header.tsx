@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
-import useScrollHandler from "@/lib/hooks/useScrollHandler";
+import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import NavList from "./NavList";
 import { ModeToggle } from "../theme-switcher";
@@ -15,9 +15,16 @@ import { MotionDiv, MotionHeader } from "../framer-motion/Motion";
 
 const Header = () => {
   // Track scrollbar
-  const { lastScrollY } = useScrollHandler();
   const router = useRouter();
-  const isScrolled = lastScrollY > 20;
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Only re-render when the header crosses the threshold, not on every scroll.
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <MotionHeader
@@ -25,10 +32,10 @@ const Header = () => {
       initial="hidden"
       animate="visible"
       className={cn(
-        "sticky left-0 right-0 top-0 z-50 flex items-center justify-center w-full transition-all duration-500",
+        "sticky left-0 right-0 top-0 z-50 flex items-center justify-center w-full transition-[background-color,border-color,box-shadow] duration-300",
         isScrolled
-          ? "glass-panel h-[4.5rem] border-t-0 border-x-0 border-b border-border/50 shadow-md shadow-brandColor/5"
-          : "bg-transparent h-[5.5rem] border-transparent"
+          ? "glass-panel h-20 border-t-0 border-x-0 border-b border-border/50 shadow-md shadow-brandColor/5"
+          : "bg-transparent h-20 border-transparent"
       )}
     >
       <nav aria-label="Main" className="flex justify-between items-center w-full max-w-[70rem] mx-auto px-5 md:px-10 xl:px-0 h-full">
@@ -43,7 +50,7 @@ const Header = () => {
             <Button
               variant="outline"
               className={cn(
-                "hidden lg:block transition-all duration-500 rounded-full font-code tracking-wider font-semibold",
+                "hidden lg:block rounded-full font-code tracking-wider font-semibold",
                 "h-11 text-sm px-5"
               )}
               onClick={() => router.push("/#contact")}

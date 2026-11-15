@@ -36,7 +36,7 @@ const Whatsapp = () => {
         aria-label="Contact on WhatsApp"
       >
         {/* Pulsing ring background */}
-        <span className="absolute inset-0.5 rounded-full bg-emerald-500/20 animate-ping opacity-75 group-hover:animate-none scale-105" />
+        <span className="absolute inset-0.5 rounded-full bg-emerald-500/20 animate-ping [animation-iteration-count:3] opacity-0 group-hover:animate-none scale-105" />
         
         {/* WhatsApp Icon wrapper */}
         <div className="relative z-10 w-[45px] h-[45px] md:w-[50px] md:h-[50px] lg:w-[56px] lg:h-[56px] rounded-full shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/30 hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center">

@@ -172,7 +172,7 @@
 
   /*  animation  */
   .animate_bounce {
-    animation: bounce 1s infinite;
+    animation: nudge 1.6s ease-in-out infinite alternate;
   }
 
   .animate_left_to_right {
@@ -222,37 +222,37 @@
 
 @keyframes ledgerLeftRight {
   0% {
-    left: -40px;
+    transform: translateX(-48px);
   }
   100% {
-    left: 100%;
+    transform: translateX(22rem);
   }
 }
 
 @keyframes ledgerRightLeft {
   0% {
-    right: -40px;
+    transform: translateX(48px);
   }
   100% {
-    right: 100%;
+    transform: translateX(-22rem);
   }
 }
 
 @keyframes ledgerBottomTop {
   0% {
-    bottom: -40px;
+    transform: translateY(48px);
   }
   100% {
-    bottom: 100%;
+    transform: translateY(-22rem);
   }
 }
 
 @keyframes ledgerTopBottom {
   0% {
-    top: -40px;
+    transform: translateY(-48px);
   }
   100% {
-    top: 100%;
+    transform: translateY(22rem);
   }
 }
 
@@ -465,5 +465,36 @@
     transform: scale(0.62);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+}
+
+@keyframes nudge {
+  from {
+    transform: translateY(-3px);
+  }
+  to {
+    transform: translateY(3px);
+  }
+}
+
+/* Reduced motion: looping decoration stops; state changes (hover, focus,
+   open/close) stay but lose their travel. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-ping,
+  .animate-pulse,
+  .animate_bounce,
+  .animate_left_to_right,
+  .animate_ledger_left_right,
+  .animate_ledger_right_left,
+  .animate_ledger_bottom_top,
+  .animate_ledger_top_bottom,
+  .error-container > span.zero {
+    animation: none !important;
+  }
+  .early-card-panel {
+    transition: none;
   }
 }

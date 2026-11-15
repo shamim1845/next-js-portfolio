@@ -37,24 +37,30 @@ function ContactForm() {
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    const emailjs = (await import("@emailjs/browser")).default;
-    emailjs
-      .send("service_bei77gf", "template_ib88cr4", data, "3B5_KCYznJHc6RLTz")
-      .then(
-        function (response) {
-          form.reset();
-          toast({
-            title: "Email sent successfully.",
-          });
-        },
-        function (error) {
-          toast({
-            title: "Email not sent.",
-          });
-          console.log("FAILED...", error);
-        }
+    // Awaited so react-hook-form keeps isSubmitting true until the request
+    // settles; the button is disabled meanwhile to prevent double sends.
+    try {
+      const emailjs = (await import("@emailjs/browser")).default;
+      await emailjs.send(
+        "service_bei77gf",
+        "template_ib88cr4",
+        data,
+        "3B5_KCYznJHc6RLTz"
       );
+      form.reset();
+      toast({
+        title: "Email sent successfully.",
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Email not sent.",
+      });
+      console.error("Contact form send failed", error);
+    }
   }
+
+  const isSubmitting = form.formState.isSubmitting;
 
   return (
     <Form {...form}>
@@ -123,11 +129,12 @@ function ContactForm() {
         <Button 
           type="submit" 
           size="lg" 
-          aria-label="Submit Contact Form"
-          className="group/btn bg-brandSolid hover:bg-brandSolid/95 hover:scale-[1.02] active:scale-[0.98] text-white rounded-full shadow-lg shadow-brandColor/20 hover:shadow-brandColor/35 transition-all duration-300 px-6 font-semibold text-sm flex items-center gap-2.5 w-full sm:w-auto justify-center border-none cursor-pointer"
+          disabled={isSubmitting}
+          aria-busy={isSubmitting}
+          className="group/btn bg-brandSolid hover:bg-brandSolid/95 hover:scale-[1.02] active:scale-[0.98] text-white rounded-full shadow-lg shadow-brandColor/20 hover:shadow-brandColor/35 transition-all duration-300 px-6 font-semibold text-sm flex items-center gap-2.5 w-full sm:w-auto justify-center border-none cursor-pointer disabled:opacity-70 disabled:hover:scale-100"
         >
-          <span>Send Message</span>
-          <Send className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
+          <span>{isSubmitting ? "Sending…" : "Send Message"}</span>
+          <Send aria-hidden="true" className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
         </Button>
       </form>
     </Form>

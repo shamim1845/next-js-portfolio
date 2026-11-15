@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { motion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 import { ArrowRight, Download, Copy, Check } from "lucide-react";
 import { Button } from "../ui/button";
 import ScrollDown from "./ScrollDown";
@@ -48,10 +48,13 @@ const HeroSection = () => {
     "MERN Stack Developer",
     "Clean Code Enthusiast",
   ], []);
-  const [currentText, setCurrentText] = useState("");
+  // Start with the lead title fully written so it is readable on first paint;
+  // the loop begins by pausing on it. Reduced motion keeps it static.
+  const reduceMotion = useReducedMotion();
+  const [currentText, setCurrentText] = useState(roles[0]);
   const [roleIndex, setRoleIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [speed, setSpeed] = useState(100);
+  const [isDeleting, setIsDeleting] = useState(true);
+  const [speed, setSpeed] = useState(2500);
 
   const [copied, setCopied] = useState(false);
 
@@ -95,6 +98,7 @@ const HeroSection = () => {
   };
 
   useEffect(() => {
+    if (reduceMotion) return;
     let timer: NodeJS.Timeout;
 
     const handleType = () => {
@@ -127,7 +131,7 @@ const HeroSection = () => {
 
     timer = setTimeout(handleType, speed);
     return () => clearTimeout(timer);
-  }, [currentText, isDeleting, roleIndex, speed, roles]);
+  }, [currentText, isDeleting, roleIndex, speed, roles, reduceMotion]);
 
   return (
     <MotionSection
@@ -147,7 +151,7 @@ const HeroSection = () => {
           <MotionDiv variants={fadeInVariants}>
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 text-xs font-semibold rounded-full bg-brandColor/5 dark:bg-zinc-950/40 text-brandColor border border-brandColor/20 backdrop-blur-md w-fit mb-2 shadow-sm hover:border-brandColor/40 hover:bg-brandColor/5 transition-all duration-300 group cursor-default">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="animate-ping [animation-iteration-count:3] absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-0"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 shadow-[0_0_8px_#10b981]"></span>
               </span>
               <span className="tracking-wide uppercase text-[11px]">Open for opportunities</span>
@@ -161,7 +165,7 @@ const HeroSection = () => {
               animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
               transition={{
                 duration: 2.5,
-                repeat: Infinity,
+                repeat: 1,
                 repeatDelay: 1,
                 ease: "easeInOut"
               }}
