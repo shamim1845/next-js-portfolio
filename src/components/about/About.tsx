@@ -110,7 +110,7 @@ const About = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-wider text-zinc-500 font-semibold">
+                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold">
                     {stat.title}
                   </p>
                   <p className="text-lg font-extrabold text-foreground tracking-wide mt-0.5">

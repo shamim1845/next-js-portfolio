@@ -18,7 +18,7 @@ const NotFound = () => {
         <span className="zero mr-2" />
         <span className="four" />
       </div>
-      <Button asChild className="bg-brandColor hover:bg-brandColor/90" size={"lg"}>
+      <Button asChild size={"lg"}>
         <Link href={"/"}>Back To Home</Link>
       </Button>
     </section>

@@ -15,12 +15,13 @@ module.exports = {
         code: ["var(--font-code)", "monospace"],
       },
       colors: {
-        brandColor: "hsl(var(--brand-color))",
+        brandColor: "hsl(var(--brand-color) / <alpha-value>)",
+        brandSolid: "hsl(var(--brand-solid) / <alpha-value>)",
         brandSecondary: "var(--brand-secondary)",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
-        ring: "#B06223",
+        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {

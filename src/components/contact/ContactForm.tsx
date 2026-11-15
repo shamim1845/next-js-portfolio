@@ -64,7 +64,7 @@ function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-bold mb-1 ml-1">
+              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
                 Name
               </FormLabel>
               <FormControl>
@@ -84,7 +84,7 @@ function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-bold mb-1 ml-1">
+              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
                 Email
               </FormLabel>
               <FormControl>
@@ -105,7 +105,7 @@ function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-bold mb-1 ml-1">
+              <FormLabel className="font-code text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-bold mb-1 ml-1">
                 Message
               </FormLabel>
               <FormControl>
@@ -124,7 +124,7 @@ function ContactForm() {
           type="submit" 
           size="lg" 
           aria-label="Submit Contact Form"
-          className="group/btn bg-gradient-to-r from-brandColor to-orange-500 hover:scale-[1.02] active:scale-95 text-white rounded-full shadow-lg shadow-brandColor/25 hover:shadow-brandColor/40 transition-all duration-300 px-8 py-3.5 font-bold font-code tracking-wider text-xs uppercase flex items-center gap-2.5 w-full sm:w-auto justify-center border-none cursor-pointer"
+          className="group/btn bg-brandSolid hover:bg-brandSolid/95 hover:scale-[1.02] active:scale-95 text-white rounded-full shadow-lg shadow-brandColor/25 hover:shadow-brandColor/40 transition-all duration-300 px-8 py-3.5 font-bold font-code tracking-wider text-xs uppercase flex items-center gap-2.5 w-full sm:w-auto justify-center border-none cursor-pointer"
         >
           <span>Send Message</span>
           <Send className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />

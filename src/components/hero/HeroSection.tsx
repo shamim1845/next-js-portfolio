@@ -232,7 +232,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 aria-label="Download Resume"
-                className="group/btn relative bg-brandColor hover:bg-brandColor/95 text-white rounded-full shadow-lg shadow-brandColor/20 hover:shadow-brandColor/35 hover:scale-[1.02] transition-all duration-300 flex items-center gap-2.5 px-6 font-semibold"
+                className="group/btn relative bg-brandSolid hover:bg-brandSolid/95 text-white rounded-full shadow-lg shadow-brandColor/20 hover:shadow-brandColor/35 hover:scale-[1.02] transition-all duration-300 flex items-center gap-2.5 px-6 font-semibold"
               >
                 <span>Download My Resume</span>
                 <Download className="w-4 h-4 group-hover/btn:translate-y-0.5 transition-transform duration-300" />
@@ -265,10 +265,10 @@ const HeroSection = () => {
                 <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
                 <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
               </div>
-              <span className="text-zinc-500 text-xs tracking-wider select-none">shamim.json</span>
+              <span className="text-zinc-400 text-xs tracking-wider select-none">shamim.json</span>
               <button
                 onClick={handleCopy}
-                className="w-12 flex justify-end text-zinc-500 hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                className="w-12 flex justify-end text-zinc-400 hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
                 title="Copy JSON"
                 aria-label="Copy JSON to clipboard"
               >
@@ -285,30 +285,30 @@ const HeroSection = () => {
               <div>
                 <span className="text-amber-500 dark:text-amber-400 font-semibold">const</span>{" "}
                 <span className="text-blue-500 dark:text-blue-400">developer</span>{" "}
-                <span className="text-zinc-500 dark:text-zinc-400">=</span>{" "}
-                <span className="text-zinc-400 dark:text-zinc-500">{"{"}</span>
+                <span className="text-zinc-400">=</span>{" "}
+                <span className="text-zinc-400">{"{"}</span>
               </div>
               <div className="pl-5">
                 <span className="text-red-500 dark:text-red-400">name</span>
-                <span className="text-zinc-500">:</span>{" "}
+                <span className="text-zinc-400">:</span>{" "}
                 <span className="text-emerald-600 dark:text-emerald-400">&apos;{developerObj.name}&apos;</span>
-                <span className="text-zinc-500">,</span>
+                <span className="text-zinc-400">,</span>
               </div>
               <div className="pl-5">
                 <span className="text-red-500 dark:text-red-400">role</span>
-                <span className="text-zinc-500">:</span>{" "}
+                <span className="text-zinc-400">:</span>{" "}
                 <span className="text-emerald-600 dark:text-emerald-400">&apos;{developerObj.role}&apos;</span>
-                <span className="text-zinc-500">,</span>
+                <span className="text-zinc-400">,</span>
               </div>
               <div className="pl-5">
                 <span className="text-red-500 dark:text-red-400">experience</span>
-                <span className="text-zinc-500">:</span>{" "}
+                <span className="text-zinc-400">:</span>{" "}
                 <span className="text-orange-500 dark:text-orange-400">{developerObj.experience}</span>
-                <span className="text-zinc-500">,</span> <span className="text-zinc-500 dark:text-zinc-600">{"// years"}</span>
+                <span className="text-zinc-400">,</span> <span className="text-zinc-400">{"// years"}</span>
               </div>
               <div className="pl-5">
                 <span className="text-red-500 dark:text-red-400">skills</span>
-                <span className="text-zinc-500">:</span> <span className="text-zinc-400 dark:text-zinc-500">[</span>
+                <span className="text-zinc-400">:</span> <span className="text-zinc-400">[</span>
               </div>
               {skillRows.map((row, rowIndex) => (
                 <div key={rowIndex} className="pl-10">
@@ -317,38 +317,38 @@ const HeroSection = () => {
                     return (
                       <span key={skill}>
                         <span className="text-emerald-600 dark:text-emerald-400">&apos;{skill}&apos;</span>
-                        {!isLastItem && <span className="text-zinc-500">, </span>}
+                        {!isLastItem && <span className="text-zinc-400">, </span>}
                       </span>
                     );
                   })}
                 </div>
               ))}
               <div className="pl-5">
-                <span className="text-zinc-400 dark:text-zinc-500">]</span><span className="text-zinc-500">,</span>
+                <span className="text-zinc-400">]</span><span className="text-zinc-400">,</span>
               </div>
               <div className="pl-5">
                 <span className="text-red-500 dark:text-red-400">location</span>
-                <span className="text-zinc-500">:</span>{" "}
+                <span className="text-zinc-400">:</span>{" "}
                 <span className="text-emerald-600 dark:text-emerald-400">&apos;{developerObj.location}&apos;</span>
-                <span className="text-zinc-500">,</span>
+                <span className="text-zinc-400">,</span>
               </div>
               <div className="pl-5">
                 <span className="text-red-500 dark:text-red-400">available</span>
-                <span className="text-zinc-500">:</span>{" "}
+                <span className="text-zinc-400">:</span>{" "}
                 <span className="text-orange-500 dark:text-orange-400">{String(developerObj.available)}</span>
               </div>
               <div>
-                <span className="text-zinc-400 dark:text-zinc-500">{"}"}</span>
-                <span className="text-zinc-500">;</span>
+                <span className="text-zinc-400">{"}"}</span>
+                <span className="text-zinc-400">;</span>
               </div>
               <div className="pt-3 border-t border-border/10 mt-3">
-                <span className="text-zinc-500 dark:text-zinc-600">&gt; developer.sayHello()</span>
+                <span className="text-zinc-400">&gt; developer.sayHello()</span>
               </div>
               <div className="text-brandColor font-semibold italic">
                 &quot;Building fast, responsive, and scalable web apps with passion.&quot;
               </div>
               <div className="flex items-center">
-                <span className="text-zinc-500 dark:text-zinc-600">&gt; </span>
+                <span className="text-zinc-400">&gt; </span>
                 <span className="w-2.5 h-4 bg-brandColor ml-1.5 animate-pulse" />
               </div>
             </div>

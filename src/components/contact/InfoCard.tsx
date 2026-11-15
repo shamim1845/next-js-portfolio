@@ -9,7 +9,7 @@ const InfoCard = ({
         {info.icon}
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-[10px] font-code font-bold tracking-widest text-zinc-500 uppercase mb-1">
+        <p className="text-[10px] font-code font-bold tracking-widest text-muted-foreground uppercase mb-1">
           {info.title}
         </p>
         {info.data.map((val) => (

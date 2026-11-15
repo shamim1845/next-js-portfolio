@@ -100,7 +100,7 @@ const Achievements = () => {
                   <span className="text-sm font-semibold tracking-wide text-foreground group-hover:text-brandColor transition-colors duration-300">
                     {achivement.title}
                   </span>
-                  <span className="text-[10px] font-code text-zinc-500 group-hover:text-brandColor/80 uppercase tracking-widest transition-colors duration-300 shrink-0">
+                  <span className="text-[10px] font-code text-muted-foreground group-hover:text-brandColor/80 uppercase tracking-widest transition-colors duration-300 shrink-0">
                     {achivement.platform}
                   </span>
                 </div>
