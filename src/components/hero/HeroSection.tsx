@@ -268,7 +268,7 @@ const HeroSection = () => {
               <span className="text-zinc-400 text-xs tracking-wider select-none">shamim.json</span>
               <button
                 onClick={handleCopy}
-                className="w-12 flex justify-end text-zinc-400 hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                className="-my-3 -mr-3 flex h-11 w-11 items-center justify-center rounded-md text-zinc-400 hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
                 title="Copy JSON"
                 aria-label="Copy JSON to clipboard"
               >

@@ -129,7 +129,7 @@ const NavList = ({ classList }: { classList?: string }) => {
             <Link
               href={navItem.link}
               className={cn(
-                "transition-colors text-sm font-semibold tracking-wider font-code",
+                "inline-flex min-h-[44px] items-center rounded-md transition-colors text-sm font-semibold tracking-wider font-code",
                 isActive
                   ? "text-brandColor font-bold"
                   : "text-foreground/70 hover:text-brandColor"
@@ -140,7 +140,7 @@ const NavList = ({ classList }: { classList?: string }) => {
             {isActive && (
               <MotionDiv
                 layoutId="activeNavIndicator"
-                className="absolute bottom-0 left-0 right-0 h-[2px] bg-brandColor rounded-full"
+                className="absolute bottom-2 left-0 right-0 h-[2px] bg-brandColor rounded-full"
                 transition={{
                   type: "spring",
                   stiffness: 300,

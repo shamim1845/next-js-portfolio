@@ -11,10 +11,10 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
   return (
     <MotionDiv
       variants={fadeInVariants}
-      className="relative overflow-hidden group rounded-2xl border border-border/70 dark:border-border/30 w-full h-full bg-card/10 dark:bg-zinc-950/20 shadow-lg aspect-[16/10] cursor-default"
+      className="relative overflow-hidden group rounded-2xl border border-border/70 dark:border-border/30 w-full h-full bg-card/10 dark:bg-zinc-950/20 shadow-sm early-card"
     >
       {/* Background/Base Image */}
-      <div className="w-full h-full relative z-0">
+      <div className="early-card-media relative z-0 w-full">
         {project.images?.length ? (
           <>
             <Image
@@ -31,7 +31,7 @@ const EarlyProjectCard = ({ project }: { project: ProjectProps }) => {
       </div>
 
       {/* Hover Sliding Glassmorphic Panel */}
-      <div className="absolute inset-0 bg-background/95 dark:bg-[#0c0d12]/95 backdrop-blur-md flex flex-col gap-4 p-5 sm:p-6 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out overflow-y-auto overflow-x-hidden z-20">
+      <div className="early-card-panel bg-background/95 dark:bg-[#0c0d12]/95 flex flex-col gap-4 p-5 sm:p-6 overflow-x-hidden z-20">
         {/* Header Bar: Folder Icon & Live Action Buttons */}
         <div className="flex justify-between items-center w-full shrink-0">
           <div className="text-brandColor/80 p-2 rounded-xl bg-brandColor/5 border border-brandColor/15">

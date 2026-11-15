@@ -48,7 +48,7 @@ const Projects = () => {
           <span>
             <a
               href="https://github.com/shamim1845?tab=repositories"
-              className="text-xs sm:text-sm font-code text-brandColor hover:underline transition-all"
+              className="inline-flex min-h-[44px] items-center text-xs sm:text-sm font-code text-brandColor underline-offset-4 hover:underline"
               target="_blank" rel="noopener noreferrer"
             >
               {"// view all repositories"}

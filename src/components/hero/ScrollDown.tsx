@@ -12,7 +12,7 @@ const ScrollDown = () => {
   return (
     <Button
       variant="icon"
-      className="hover:bg-transparent hover:text-brandColor transition-all "
+      className="min-h-[44px] hover:bg-transparent hover:text-brandColor transition-colors"
       onClick={handleClick}
     >
       <ArrowDownToDot className="animate_bounce mr-2 stroke-brandColor" />

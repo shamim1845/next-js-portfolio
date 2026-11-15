@@ -32,7 +32,7 @@ const Header = () => {
       )}
     >
       <nav aria-label="Main" className="flex justify-between items-center w-full max-w-[70rem] mx-auto px-5 md:px-10 xl:px-0 h-full">
-        <Link href={"/"} aria-label="Md Shamim Hossain, home" className="rounded-md">
+        <Link href={"/"} aria-label="Md Shamim Hossain, home" className="inline-flex min-h-[44px] items-center rounded-md">
           <Logo />
         </Link>
         <NavList classList="hidden lg:flex" />
@@ -44,7 +44,7 @@ const Header = () => {
               variant="outline"
               className={cn(
                 "hidden lg:block transition-all duration-500 rounded-full font-code tracking-wider font-semibold",
-                isScrolled ? "h-9 text-xs px-4" : "h-10 text-sm px-5"
+                "h-11 text-sm px-5"
               )}
               onClick={() => router.push("/#contact")}
               aria-label="Hire me"

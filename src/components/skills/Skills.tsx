@@ -37,12 +37,12 @@ const Skills = () => {
             variants={fadeInVariants}
             className="w-full md:w-[18rem] lg:w-[22rem] shrink-0"
           >
-            <TabsList className="bg-card/40 dark:bg-zinc-950/30 border border-border/70 dark:border-border/30 rounded-2xl p-2 w-full h-auto flex flex-row md:flex-col gap-1.5 justify-start items-stretch overflow-x-auto border-l-0 md:border-l-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <TabsList className="bg-card/40 dark:bg-zinc-950/30 border border-border/70 dark:border-border/30 rounded-2xl p-2 w-full h-auto flex flex-row flex-wrap md:flex-nowrap md:flex-col gap-1.5 justify-start items-stretch">
               {skillsConstant?.map((skill) => (
                 <TabsTrigger
                   key={skill.btnText}
                   value={skill.identifier as string}
-                  className="w-auto md:w-full shrink-0 text-left justify-start px-4 py-3.5 text-[12px] md:text-[14px] uppercase tracking-wider font-code font-semibold rounded-xl transition-all duration-300 border border-transparent hover:text-brandColor hover:bg-brandColor/5 data-[state=active]:bg-brandColor/10 dark:data-[state=active]:bg-brandColor/15 data-[state=active]:text-brandColor data-[state=active]:border-brandColor/30 data-[state=active]:border-l-0 md:data-[state=active]:border-l-2"
+                  className="w-auto md:w-full shrink-0 text-left justify-start px-4 py-3.5 min-h-[44px] text-[12px] md:text-[14px] uppercase tracking-wider font-code font-semibold rounded-xl transition-all duration-300 border border-transparent hover:text-brandColor hover:bg-brandColor/5 data-[state=active]:bg-brandColor/10 dark:data-[state=active]:bg-brandColor/15 data-[state=active]:text-brandColor data-[state=active]:border-brandColor/30 data-[state=active]:border-l"
                 >
                   {skill.btnText}
                 </TabsTrigger>
