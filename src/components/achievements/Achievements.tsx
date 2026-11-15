@@ -80,7 +80,7 @@ const Achievements = () => {
               <a 
                 data-fancybox="achivements" 
                 href={achivement.img}
-                className="glass-card group flex flex-col justify-between w-full h-full rounded-2xl border border-border/30 bg-card/10 dark:bg-zinc-950/10 p-4 backdrop-blur-md hover:border-brandColor/25 hover:shadow-brandColor/5 hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-zoom-in block"
+                className="glass-card group flex flex-col justify-between w-full h-full rounded-2xl border border-border/70 dark:border-border/30 bg-card/10 dark:bg-zinc-950/10 p-4 backdrop-blur-md hover:border-brandColor/25 hover:shadow-brandColor/5 transition-all duration-300 overflow-hidden cursor-zoom-in block"
               >
                 {/* Image Showcase Container */}
                 <div className="w-full aspect-[4/3] sm:aspect-[16/11] relative overflow-hidden rounded-xl border border-border/20 bg-card/30 dark:bg-zinc-950/20 z-0 shrink-0">

@@ -232,7 +232,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 aria-label="Download Resume"
-                className="group/btn relative bg-brandSolid hover:bg-brandSolid/95 text-white rounded-full shadow-lg shadow-brandColor/20 hover:shadow-brandColor/35 hover:scale-[1.02] transition-all duration-300 flex items-center gap-2.5 px-6 font-semibold"
+                className="group/btn relative bg-brandSolid hover:bg-brandSolid/95 text-white rounded-full shadow-lg shadow-brandColor/20 hover:shadow-brandColor/35 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center gap-2.5 px-6 font-semibold"
               >
                 <span>Download My Resume</span>
                 <Download className="w-4 h-4 group-hover/btn:translate-y-0.5 transition-transform duration-300" />
@@ -243,7 +243,7 @@ const HeroSection = () => {
                 variant="outline"
                 size="lg"
                 aria-label="Let's Connect"
-                className="group/btn2 rounded-full border-border/80 hover:border-brandColor hover:bg-brandColor/5 hover:scale-[1.02] transition-all duration-300 flex items-center gap-2 px-6 text-foreground font-semibold"
+                className="group/btn2 rounded-full border-border/80 hover:border-brandColor hover:bg-brandColor/5 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center gap-2 px-6 text-foreground font-semibold"
               >
                 <span>Let&apos;s Connect</span>
                 <ArrowRight className="w-4 h-4 group-hover/btn2:translate-x-1 transition-transform duration-300" />

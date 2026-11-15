@@ -22,7 +22,7 @@ const InfoCard = ({
   );
 
   const classes =
-    "glass-card flex-1 min-w-[280px] flex gap-5 items-center border border-border/30 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/10 p-5 rounded-2xl shadow-sm hover:shadow-[0_0_20px_rgba(176,98,35,0.05)] transition-all duration-300 group hover:-translate-y-0.5 w-full";
+    "glass-card flex-1 min-w-[280px] flex gap-5 items-center border border-border/70 dark:border-border/30 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/10 p-5 rounded-2xl shadow-sm hover:shadow-[0_0_20px_rgba(176,98,35,0.05)] transition-all duration-300 group w-full";
 
   if (info.link) {
     return (

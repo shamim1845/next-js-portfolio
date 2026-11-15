@@ -124,7 +124,7 @@ function ContactForm() {
           type="submit" 
           size="lg" 
           aria-label="Submit Contact Form"
-          className="group/btn bg-brandSolid hover:bg-brandSolid/95 hover:scale-[1.02] active:scale-95 text-white rounded-full shadow-lg shadow-brandColor/25 hover:shadow-brandColor/40 transition-all duration-300 px-8 py-3.5 font-bold font-code tracking-wider text-xs uppercase flex items-center gap-2.5 w-full sm:w-auto justify-center border-none cursor-pointer"
+          className="group/btn bg-brandSolid hover:bg-brandSolid/95 hover:scale-[1.02] active:scale-[0.98] text-white rounded-full shadow-lg shadow-brandColor/20 hover:shadow-brandColor/35 transition-all duration-300 px-6 font-semibold text-sm flex items-center gap-2.5 w-full sm:w-auto justify-center border-none cursor-pointer"
         >
           <span>Send Message</span>
           <Send className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />

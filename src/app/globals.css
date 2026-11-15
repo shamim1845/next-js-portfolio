@@ -125,10 +125,15 @@
 
   /* Glassmorphism custom classes */
   .glass-card {
-    @apply bg-card/50 backdrop-blur-lg border border-border/30 shadow-sm transition-all duration-300;
+    @apply bg-card/50 backdrop-blur-lg border border-border/70 shadow-sm transition-all duration-300 dark:border-border/30;
   }
+  /* Every card answers hover with the same border and shadow step.
+     Only cards that are links lift. */
   .glass-card:hover {
-    @apply bg-card/75 border-brandColor/20 shadow-md shadow-brandColor/5 -translate-y-0.5;
+    @apply bg-card/75 border-brandColor/20 shadow-md shadow-brandColor/5;
+  }
+  a.glass-card:hover {
+    @apply -translate-y-0.5;
   }
 
   .glass-panel {

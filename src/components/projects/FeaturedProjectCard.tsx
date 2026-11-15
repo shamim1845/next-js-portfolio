@@ -1,15 +1,8 @@
 "use client";
 
-import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "../ui/tooltip";
-import { cn } from "@/lib/utils";
+import ProjectLinks from "./ProjectLinks";
 import { ProjectProps } from "./projectConstant";
 import { MotionDiv } from "../framer-motion/Motion";
 import { fadeInVariants } from "../framer-motion/variants";
@@ -28,7 +21,7 @@ const ProjectCard = ({
   return (
     <MotionDiv
       variants={fadeInVariants}
-      className="glass-card flex flex-col gap-6 w-full rounded-3xl border border-border/30 bg-card/10 dark:bg-zinc-950/10 p-5 sm:p-7 backdrop-blur-md shadow-2xl hover:shadow-brandColor/5 hover:border-brandColor/25 transition-all duration-500 relative overflow-hidden cursor-default"
+      className="glass-card flex flex-col gap-6 w-full rounded-3xl border border-border/70 dark:border-border/30 bg-card/10 dark:bg-zinc-950/10 p-5 sm:p-7 backdrop-blur-md shadow-sm relative overflow-hidden cursor-default"
     >
       {/* 1. Image Gallery Banner (Full width on top) */}
       <div className="w-full relative z-10 group/img overflow-hidden rounded-2xl border border-border/40 shadow-xl bg-card/40 dark:bg-zinc-950/20 aspect-[16/10] md:aspect-[21/9]">
@@ -54,7 +47,7 @@ const ProjectCard = ({
                   src={img}
                   fill
                   sizes="(max-width: 1200px) 100vw, 1060px"
-                  className="object-cover hover:scale-[1.01] transition-transform duration-700 rounded-2xl"
+                  className="object-cover hover:scale-[1.02] transition-transform duration-500 rounded-2xl"
                 />
                 {/* Overlay Tint */}
                 <div className="absolute inset-0 bg-brandColor/5 opacity-30 group-hover/img:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />
@@ -85,90 +78,8 @@ const ProjectCard = ({
           </div>
 
           {/* Action Link Icons */}
-          <div className="flex items-center gap-3 shrink-0">
-            {/* Front End */}
-            {project?.gitHubLinks?.frontEnd && (
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={project.gitHubLinks.frontEnd}
-                      target="_blank" rel="noopener noreferrer"
-                      className="p-2.5 rounded-xl border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
-                      aria-label="GitHub Front-End Code"
-                    >
-                      <Github className="w-4 h-4" />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent className="font-code text-xs">
-                    <p>Front-End Code</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            )}
-
-            {/* Back End */}
-            {project?.gitHubLinks?.backEnd && (
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={project.gitHubLinks.backEnd}
-                      target="_blank" rel="noopener noreferrer"
-                      className="p-2.5 rounded-xl border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
-                      aria-label="GitHub Back-End Code"
-                    >
-                      <Github className="w-4 h-4" />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent className="font-code text-xs">
-                    <p>Back-End Code</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            )}
-
-            {/* Full Stack */}
-            {project?.gitHubLinks?.fullStack && (
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={project.gitHubLinks.fullStack}
-                      target="_blank" rel="noopener noreferrer"
-                      className="p-2.5 rounded-xl border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
-                      aria-label="GitHub Code"
-                    >
-                      <Github className="w-4 h-4" />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent className="font-code text-xs">
-                    <p>Source Code</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            )}
-
-            {/* Live Link */}
-            {project?.liveLink && (
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href={project.liveLink}
-                      target="_blank" rel="noopener noreferrer"
-                      className="p-2.5 rounded-xl border border-border/40 hover:border-brandColor/35 bg-card/40 dark:bg-zinc-950/20 hover:bg-brandColor/5 text-muted-foreground hover:text-brandColor hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
-                      aria-label="Live Demo Link"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent className="font-code text-xs">
-                    <p>Live Demo</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            )}
+          <div className="flex items-center gap-2 shrink-0">
+            <ProjectLinks project={project} />
           </div>
         </div>
 

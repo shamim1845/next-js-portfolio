@@ -37,7 +37,7 @@ const Skills = () => {
             variants={fadeInVariants}
             className="w-full md:w-[18rem] lg:w-[22rem] shrink-0"
           >
-            <TabsList className="bg-card/40 dark:bg-zinc-950/30 border border-border/30 rounded-2xl p-2 w-full h-auto flex flex-row md:flex-col gap-1.5 justify-start items-stretch overflow-x-auto border-l-0 md:border-l-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <TabsList className="bg-card/40 dark:bg-zinc-950/30 border border-border/70 dark:border-border/30 rounded-2xl p-2 w-full h-auto flex flex-row md:flex-col gap-1.5 justify-start items-stretch overflow-x-auto border-l-0 md:border-l-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {skillsConstant?.map((skill) => (
                 <TabsTrigger
                   key={skill.btnText}
@@ -61,7 +61,7 @@ const Skills = () => {
                 value={skill.identifier as string}
                 className="w-full mt-0"
               >
-                <div className="w-full bg-card/20 dark:bg-zinc-950/20 border border-border/30 backdrop-blur-md rounded-2xl p-4 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-brandColor/5 transition-all duration-300">
+                <div className="w-full bg-card/20 dark:bg-zinc-950/20 border border-border/70 dark:border-border/30 backdrop-blur-md rounded-2xl p-4 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-brandColor/5 transition-all duration-300">
                   {/* Category Title Header */}
                   <div className="flex items-center gap-2 pb-3.5 border-b border-border/20">
                     <span className="text-brandColor font-mono text-base font-bold tracking-wide select-none">{"@"}</span>
@@ -81,7 +81,7 @@ const Skills = () => {
                       <MotionDiv
                         variants={fadeInVariants}
                         key={tech.name}
-                        className="glass-card flex items-center gap-3 py-2.5 px-4 rounded-xl border border-border/40 bg-card/40 dark:bg-zinc-950/30 backdrop-blur-sm hover:border-brandColor/30 hover:bg-brandColor/5 hover:-translate-y-0.5 transition-all duration-300 group select-none cursor-default"
+                        className="glass-card flex items-center gap-3 py-2.5 px-4 rounded-xl border border-border/40 bg-card/40 dark:bg-zinc-950/30 backdrop-blur-sm hover:border-brandColor/30 hover:bg-brandColor/5 transition-all duration-300 group select-none cursor-default"
                       >
                         <div className="relative w-6 h-6 flex items-center justify-center shrink-0">
                           <Image

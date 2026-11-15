@@ -102,7 +102,7 @@ const About = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="glass-card flex flex-col gap-2 p-4 rounded-2xl border border-border/30 bg-card/20 dark:bg-zinc-950/20 backdrop-blur-md hover:border-brandColor/25 hover:bg-card/40 transition-all duration-300 group shadow-sm hover:shadow-brandColor/5 hover:-translate-y-1 cursor-default"
+                className="glass-card flex flex-col gap-2 p-4 rounded-2xl border border-border/70 dark:border-border/30 bg-card/20 dark:bg-zinc-950/20 backdrop-blur-md hover:border-brandColor/25 hover:bg-card/40 transition-all duration-300 group shadow-sm hover:shadow-brandColor/5 cursor-default"
               >
                 <div className="flex items-center justify-between">
                   <div className="p-2 rounded-xl bg-brandColor/10 text-brandColor group-hover:scale-105 transition-transform duration-300">
@@ -147,7 +147,7 @@ const About = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="relative z-10 w-[22rem] max-w-full aspect-square rounded-2xl border border-border/40 shadow-2xl overflow-hidden hover:scale-[1.01] hover:border-brandColor/30 transition-all duration-500 group"
+            className="relative z-10 w-[22rem] max-w-full aspect-square rounded-2xl border border-border/40 shadow-2xl overflow-hidden hover:border-brandColor/30 transition-colors duration-300 group"
           >
             {/* The Picture Frame */}
             <div className="w-full h-full relative">
