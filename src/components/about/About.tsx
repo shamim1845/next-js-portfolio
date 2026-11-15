@@ -128,7 +128,7 @@ const About = () => {
         {/* Right Column: Profile Picture Container */}
         <MotionDiv
           variants={fadeInVariants}
-          className="flex-1 flex justify-center items-center relative w-full lg:w-auto mt-6 lg:mt-0"
+          className="flex-1 flex justify-center md:justify-start lg:justify-center items-center relative w-full lg:w-auto mt-6 lg:mt-0"
         >
           {/* Ambient Glow Blob */}
           <div className="absolute w-[280px] h-[280px] bg-brandColor/10 dark:bg-brandColor/5 rounded-full blur-[80px] -z-10 pointer-events-none" />

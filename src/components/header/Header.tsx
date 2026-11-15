@@ -31,7 +31,7 @@ const Header = () => {
           : "bg-transparent h-[5.5rem] border-transparent"
       )}
     >
-      <nav aria-label="Main" className="container flex justify-between items-center w-full px-5 md:px-10 h-full">
+      <nav aria-label="Main" className="flex justify-between items-center w-full max-w-[70rem] mx-auto px-5 md:px-10 xl:px-0 h-full">
         <Link href={"/"} aria-label="Md Shamim Hossain, home" className="rounded-md">
           <Logo />
         </Link>

@@ -140,7 +140,7 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-0 w-[350px] h-[350px] bg-brandColor/10 dark:bg-brandColor/5 rounded-full blur-[120px] -z-10 pointer-events-none animate-pulse duration-[8000ms]" />
       <div className="absolute bottom-1/3 right-1/4 w-[250px] h-[250px] bg-amber-500/10 dark:bg-amber-500/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
-      <div className="flex-1 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 py-10">
+      <div className="flex-1 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 lg:gap-8 py-10">
         {/* Left Column: Info Text & CTAs */}
         <div className="flex-1 flex flex-col justify-center gap-3 sm:gap-5 w-full">
           {/* Availability Status Badge */}

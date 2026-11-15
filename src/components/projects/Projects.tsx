@@ -24,7 +24,7 @@ const Projects = () => {
       {/* Featured project */}
       <MotionDiv
         variants={containerVariants}
-        className="flex flex-col gap-20 mb-20"
+        className="flex flex-col gap-10 md:gap-12 mb-16"
       >
         {ProjectsConstant?.filter((project) => project.featured).map(
           (project, index) => (
@@ -36,7 +36,6 @@ const Projects = () => {
           )
         )}
       </MotionDiv>
-      <br />
       {/* Early project */}
       <MotionDiv
         variants={sectionVariants({ from: "left" })}
@@ -44,7 +43,7 @@ const Projects = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="mb-10 flex flex-col items-center justify-center gap-1.5">
+        <div className="mb-8 flex flex-col items-center md:items-start justify-center gap-1.5">
           <h3 className="text-2xl font-bold tracking-wide">Other Noteworthy Projects</h3>
           <span>
             <a
@@ -59,7 +58,7 @@ const Projects = () => {
 
         <MotionDiv
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {ProjectsConstant?.filter((project) => !project.featured).map(
             (project) => (

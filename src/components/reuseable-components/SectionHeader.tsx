@@ -12,7 +12,7 @@ const SectionHeader = ({
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center mb-10 select-none",
+        "flex flex-col items-center md:items-start justify-center mb-10 select-none",
         className
       )}
     >
