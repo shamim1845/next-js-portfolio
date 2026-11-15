@@ -39,25 +39,35 @@ const ProjectCard = ({
             },
           }}
         >
-          {project?.images?.map((img, index) => (
-            <a
-              key={img}
-              data-fancybox={`gallery-${project.name}`}
-              href={img}
-              className={cn(index === 0 ? "block relative w-full h-full overflow-hidden rounded-2xl" : "hidden")}
-            >
-              <Image
-                alt={project.name}
-                src={img}
-                width={1200}
-                height={600}
-                priority
-                className="w-full h-full object-cover hover:scale-[1.01] transition-transform duration-700 rounded-2xl"
+          {/* Only the cover is rendered as an image; the rest are gallery links
+              that Fancybox loads on demand. */}
+          {project?.images?.map((img, index) =>
+            index === 0 ? (
+              <a
+                key={img}
+                data-fancybox={`gallery-${project.name}`}
+                href={img}
+                className="block relative w-full h-full overflow-hidden rounded-2xl"
+              >
+                <Image
+                  alt={project.name}
+                  src={img}
+                  fill
+                  sizes="(max-width: 1200px) 100vw, 1060px"
+                  className="object-cover hover:scale-[1.01] transition-transform duration-700 rounded-2xl"
+                />
+                {/* Overlay Tint */}
+                <div className="absolute inset-0 bg-brandColor/5 opacity-30 group-hover/img:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />
+              </a>
+            ) : (
+              <a
+                key={img}
+                data-fancybox={`gallery-${project.name}`}
+                href={img}
+                className="hidden"
               />
-              {/* Overlay Tint */}
-              <div className="absolute inset-0 bg-brandColor/5 opacity-30 group-hover/img:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />
-            </a>
-          ))}
+            )
+          )}
         </Fancybox>
       </div>
 

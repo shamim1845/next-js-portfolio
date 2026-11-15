@@ -89,7 +89,6 @@ const Skills = () => {
                             alt={tech.name}
                             fill
                             sizes="24px"
-                            priority
                             className="object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>

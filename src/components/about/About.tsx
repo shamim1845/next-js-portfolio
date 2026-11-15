@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import SectionHeader from "../reuseable-components/SectionHeader";
 import { MotionDiv, MotionSection } from "../framer-motion/Motion";
-import { motion } from "framer-motion";
 import { Award, Code2, Sparkles, Zap } from "lucide-react";
 import {
   containerVariants,
@@ -150,15 +150,14 @@ const About = () => {
             className="relative z-10 w-[22rem] max-w-full aspect-square rounded-2xl border border-border/40 shadow-2xl overflow-hidden hover:scale-[1.01] hover:border-brandColor/30 transition-all duration-500 group"
           >
             {/* The Picture Frame */}
-            <div
-              className="w-full h-full relative"
-              style={{
-                backgroundImage: "url('/shamim-3.jpg')",
-                backgroundPosition: "center center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-            >
+            <div className="w-full h-full relative">
+              <Image
+                src="/shamim-3.jpg"
+                alt="Portrait of Md Shamim Hossain"
+                fill
+                sizes="(max-width: 400px) 90vw, 352px"
+                className="object-cover object-center"
+              />
               {/* Ledger Line Shimmers (Polished) */}
               <span className="absolute -top-1 left-0 z-20 h-0.5 w-12 animate_ledger_left_right rounded-full bg-gradient-to-r from-transparent to-brandColor"></span>
               <span className="absolute top-auto -bottom-1 left-auto z-20 h-0.5 w-12 animate_ledger_right_left rounded-full bg-gradient-to-r from-brandColor to-transparent"></span>

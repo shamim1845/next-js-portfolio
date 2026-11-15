@@ -88,8 +88,7 @@ const Achievements = () => {
                     src={achivement.img}
                     alt={achivement.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
+                    sizes="(max-width: 768px) 100vw, 520px"
                     className="object-cover hover:scale-[1.02] transition-transform duration-500 rounded-xl"
                   />
                   {/* Overlay Tint */}

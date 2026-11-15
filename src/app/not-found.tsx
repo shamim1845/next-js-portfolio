@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | Md Shamim Hossain",
+  robots: { index: false, follow: true },
+};
 
 const NotFound = () => {
   return (

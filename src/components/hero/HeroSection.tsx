@@ -223,7 +223,7 @@ const HeroSection = () => {
           {/* Dual Action Buttons */}
           <MotionDiv variants={fadeInVariants} className="flex flex-wrap items-center gap-4 mt-8">
             <a
-              href={"/Md_Shamim_Hossain_Front_End_Developer_Resume.pdf"}
+              href={"/Md_Shamim_Hossain_Full-Stack_JavaScript_Developer_Resume.pdf"}
               download
               className="inline-block"
             >
